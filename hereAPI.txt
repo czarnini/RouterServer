@@ -1,0 +1,9 @@
+https://traffic.cit.api.here.com/traffic/6.2/flow.xml?%20app_id=SFN5WMhpdHZKNlQ9e7pq%20&app_code=enZwT40RzUakJKhFR2OssQ%20&bbox=52.232589,%2020.981270;52.213540,%2021.021311
+
+
+https://traffic.cit.api.here.com/traffic/6.2/flow.xml?%20app_id=SFN5WMhpdHZKNlQ9e7pq%20&app_code=enZwT40RzUakJKhFR2OssQ%20&bbox=52.232361,20.982775;52.226357,21.002973
+
+
+
+
+https://traffic.cit.api.here.com/traffic/6.2/flow.xml?%20app_id=SFN5WMhpdHZKNlQ9e7pq%20&app_code=enZwT40RzUakJKhFR2OssQ%20&bbox=52.233119,20.998258;52.229859,21.011798
