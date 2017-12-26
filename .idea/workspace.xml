@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df1eac5b-5b72-4fbe-8f30-45ca0839e47d" name="Default" comment="" />
+    <list default="true" id="df1eac5b-5b72-4fbe-8f30-45ca0839e47d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commons-lang3-3.7.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3_7.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/networking/Main.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bogucki/networking/Main.java" afterPath="$PROJECT_DIR$/src/com/bogucki/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/7acb4859-592c-44ec-8bb9-82229381d550/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/7acb4859-592c-44ec-8bb9-82229381d550/_metadata_/metadata" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/7acb4859-592c-44ec-8bb9-82229381d550/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/7acb4859-592c-44ec-8bb9-82229381d550/_metadata_/metadata.values.at" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Distances.db" afterPath="$PROJECT_DIR$/Distances.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/MapsAPI/GoogleMaps.class" afterPath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/MapsAPI/GoogleMaps.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/databse/DistanceHelper.class" afterPath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/databse/DistanceHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/networking/EchoPostNewAddressHandler.class" afterPath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/networking/EchoPostNewAddressHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/networking/EchoPostOptimizeHandler.class" afterPath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/networking/EchoPostOptimizeHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/optimize/Route.class" afterPath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/optimize/Route.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/optimize/VNSOptimizer.class" afterPath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/optimize/VNSOptimizer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/7acb4859-592c-44ec-8bb9-82229381d550.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/7acb4859-592c-44ec-8bb9-82229381d550.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RouterServer.iml" afterPath="$PROJECT_DIR$/RouterServer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java" afterPath="$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java" afterPath="$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java" afterPath="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bogucki/optimize/Route.java" afterPath="$PROJECT_DIR$/src/com/bogucki/optimize/Route.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java" afterPath="$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,63 +44,91 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Distances.db" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Distances.db" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="main" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Distances.db" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="main" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="ADDRESSES_DICT" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
+    <expand>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="Distances.db" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="Distances.db" type="e3449647:DbNodeDescriptor" />
+        <item name="main" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="Distances.db" type="e3449647:DbNodeDescriptor" />
+        <item name="main" type="e3449647:DbNodeDescriptor" />
+        <item name="A14" type="e3449647:DbNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Inżynier" />
   </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf>
-          <file leaf-file-name="GoogleMaps.java" pinned="false" current-in-tab="true">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="EchoPostOptimizeHandler.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GoogleMaps.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="24" column="50" lean-forward="false" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-                  <folding />
+                <state relative-caret-position="17">
+                  <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="VNSOptimizer.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="493">
+                  <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="method#VNSOptimizer#0;class#VNSOptimizer#0" expanded="false" />
+                    <element signature="method#opt2#0;class#VNSOptimizer#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DistanceHelper.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="234">
+                  <caret line="214" column="29" lean-forward="true" selection-start-line="214" selection-start-column="29" selection-end-line="214" selection-end-column="29" />
+                  <folding>
+                    <element signature="method#createAddressDictionary#0;class#DistanceHelper#0" expanded="false" />
+                    <element signature="method#generateHoursColumns#0;class#DistanceHelper#0" expanded="false" />
+                    <element signature="method#DistanceHelper#0;class#DistanceHelper#0" expanded="false" />
+                    <element signature="method#cleanUp#0;class#DistanceHelper#0" expanded="false" />
+                    <element signature="docComment;method#getTime#0;class#DistanceHelper#0" expanded="false" />
+                    <element signature="method#getResult#0;class#DistanceHelper#0" expanded="false" />
+                    <element signature="method#getResult#1;class#DistanceHelper#0" expanded="false" />
+                    <element signature="docComment;method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+                    <element signature="method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+                    <element signature="method#addAddressToDict#0;class#DistanceHelper#0" expanded="false" />
+                    <element signature="method#createAddressTable#0;class#DistanceHelper#0" expanded="false" />
+                    <element signature="method#insertTimes#0;class#DistanceHelper#0" expanded="false" />
+                    <element signature="method#getAddress#0;class#DistanceHelper#0" expanded="false" />
+                    <element signature="method#getAddressID#0;class#DistanceHelper#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -86,13 +137,17 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/Main.java">
+          <file leaf-file-name="Route.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/Route.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+                <state relative-caret-position="578">
+                  <caret line="78" column="39" lean-forward="false" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#581#582#0" expanded="true" />
+                    <element signature="e#620#621#0" expanded="true" />
+                    <element signature="e#657#658#0" expanded="true" />
+                    <element signature="e#718#719#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -111,10 +166,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ADRE</find>
-      <find>(0</find>
-      <find>from</find>
-      <find>insert into A1</find>
       <find>select</find>
       <find>//System.out</find>
       <find>getAddressId</find>
@@ -141,11 +192,18 @@
       <find>getTi</find>
       <find>static</find>
       <find>c.close</find>
+      <find>VNS</find>
+      <find>cities</find>
+      <find>5</find>
+      <find>Mappin</find>
     </findStrings>
     <replaceStrings>
       <replace>System.out</replace>
       <replace>//System.out</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -155,23 +213,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/bogucki/Main.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/RootHandler.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/EchoPostHandler.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/networking/RootHandler.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/optimize/Client.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/optimize/Meeting.java" />
-        <option value="$PROJECT_DIR$/src/com/bogucki/optimize/Route.java" />
-        <option value="$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostHandler.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostNewAdressHandler.java" />
         <option value="dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A1" />
-        <option value="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java" />
         <option value="dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A13" />
-        <option value="$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostNewAddressHandler.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/networking/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/bogucki/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java" />
+        <option value="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java" />
+        <option value="$PROJECT_DIR$/src/com/bogucki/optimize/Route.java" />
       </list>
     </option>
   </component>
@@ -184,12 +242,12 @@
   <component name="MavenProjectNavigator">
     <treeState />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -205,140 +263,72 @@
     <panes>
       <pane id="PackagesPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Inżynier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RouterServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Inżynier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RouterServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.bogucki" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Inżynier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RouterServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.bogucki" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="networking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Inżynier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RouterServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.bogucki" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="databse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="RouterServer" type="58d84e3e:PackageViewProjectNode" />
+              <item name="RouterServer" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="RouterServer" type="58d84e3e:PackageViewProjectNode" />
+              <item name="RouterServer" type="616d4139:PackageViewModuleNode" />
+              <item name="com.bogucki" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="RouterServer" type="58d84e3e:PackageViewProjectNode" />
+              <item name="RouterServer" type="616d4139:PackageViewModuleNode" />
+              <item name="com.bogucki" type="1f31426a:PackageElementNode" />
+              <item name="databse" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="RouterServer" type="58d84e3e:PackageViewProjectNode" />
+              <item name="RouterServer" type="616d4139:PackageViewModuleNode" />
+              <item name="com.bogucki" type="1f31426a:PackageElementNode" />
+              <item name="networking" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Inżynier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Inżynier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Inżynier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="RouterServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RouterServer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RouterServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RouterServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RouterServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RouterServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bogucki" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Production">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Inżynier">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="com/bogucki">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Inżynier">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="Googl&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/MapsAPI/GoogleMaps.java&#10;Main&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/Main.java&#10;Dis&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/databse/DistanceHelper.java&#10;goo&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/MapsAPI/GoogleMaps.java&#10;Main.ja&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/Main.java&#10;ec&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/EchoPostNewAddressHandler.java&#10;echo&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/EchoPostNewAddressHandler.java&#10;TODO&#9;ACTION&#9;ActivateTODOToolWindow&#10;TOD&#9;ACTION&#9;ActivateTODOToolWindow&#10;livet&#9;ACTION&#9;InsertLiveTemplate&#10;settin&#9;ACTION&#9;Database.Settings&#10;Maven&#9;ACTION&#9;ActivateMavenProjectsToolWindow" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+    <property name="SearchEverywhereHistoryKey" value="han&#9;FILE&#9;file://C:/Users/boguc/IdeaProjects/RouterServer/src/com/bogucki/networking/EchoPostOptimizeHandler.java&#10;da&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;data&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;Googl&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/MapsAPI/GoogleMaps.java&#10;Main&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/Main.java&#10;Dis&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/databse/DistanceHelper.java&#10;goo&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/MapsAPI/GoogleMaps.java&#10;Main.ja&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/Main.java&#10;ec&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/EchoPostNewAddressHandler.java&#10;echo&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/EchoPostNewAddressHandler.java&#10;TODO&#9;ACTION&#9;ActivateTODOToolWindow&#10;TOD&#9;ACTION&#9;ActivateTODOToolWindow&#10;livet&#9;ACTION&#9;InsertLiveTemplate&#10;settin&#9;ACTION&#9;Database.Settings&#10;Maven&#9;ACTION&#9;ActivateMavenProjectsToolWindow" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
     <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\boguc\IdeaProjects\RouterServer" />
+    </key>
     <key name="IntroduceConstantDialog.RECENTS_KEY">
       <recent name="com.bogucki.databse.DistanceHelper" />
     </key>
@@ -359,9 +349,9 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="com.bogucki.networking.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.bogucki.Main" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -374,7 +364,22 @@
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
@@ -592,15 +597,6 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -718,15 +714,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -740,9 +727,6 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-    </list>
     <recent_temporary>
       <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
@@ -770,11 +754,13 @@
       <workItem from="1511795632268" duration="4648000" />
       <workItem from="1512210458682" duration="3512000" />
       <workItem from="1512222442116" duration="4282000" />
+      <workItem from="1514104859607" duration="6558000" />
+      <workItem from="1514282196718" duration="9393000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54711000" />
+    <option name="totallyTimeSpent" value="70662000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -791,31 +777,31 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32750243" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19814815" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="0" y="29" width="1914" height="1001" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25947523" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="0" y="29" width="1914" height="1001" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14791666" sideWeight="0.49430895" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14895834" sideWeight="0.49430895" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0859375" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28229168" sideWeight="0.50569105" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38872692" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -854,17 +840,57 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java</url>
+          <line>246</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="33" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -873,55 +899,91 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#VNSOptimizer#0;class#VNSOptimizer#0" expanded="false" />
+            <element signature="method#opt2#0;class#VNSOptimizer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostNewAddressHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="50" lean-forward="false" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2205">
           <caret line="105" column="49" lean-forward="false" selection-start-line="105" selection-start-column="49" selection-end-line="105" selection-end-column="49" />
           <folding>
-            <marker date="1512224497029" expanded="false" signature="37:165" ph="..." />
-            <marker date="1512224497029" expanded="false" signature="564:1175" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="1249:1558" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="1588:1806" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="1834:1956" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="1963:2205" ph="/**...*/" />
-            <marker date="1512224497029" expanded="false" signature="2281:2515" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="2580:3130" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="3232:3813" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="3819:4024" ph="/**...*/" />
-            <marker date="1512224497029" expanded="true" signature="4089:4310" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="4382:4836" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="4909:5426" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="5533:6333" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="6394:6893" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="6969:7227" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="7303:7852" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="7909:8489" ph="{...}" />
+            <element signature="method#createAddressDictionary#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#generateHoursColumns#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#DistanceHelper#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#cleanUp#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="docComment;method#getTime#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getResult#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getResult#1;class#DistanceHelper#0" expanded="false" />
+            <element signature="docComment;method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#addAddressToDict#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#createAddressTable#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#insertTimes#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getAddressID#0;class#DistanceHelper#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.ADDRESSES_DICT">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.ADDRESSES_DICT" />
     <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="966">
           <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
@@ -935,7 +997,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="798">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -944,29 +1008,25 @@
         <state relative-caret-position="3129">
           <caret line="149" column="26" lean-forward="true" selection-start-line="149" selection-start-column="26" selection-end-line="149" selection-end-column="26" />
           <folding>
-            <marker date="1512224497029" expanded="false" signature="37:165" ph="..." />
-            <marker date="1512224497029" expanded="false" signature="564:1175" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="1249:1558" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="1588:1806" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="1834:1956" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="1963:2205" ph="/**...*/" />
-            <marker date="1512224497029" expanded="false" signature="2281:2515" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="2580:3130" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="3232:3813" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="3819:4024" ph="/**...*/" />
-            <marker date="1512224497029" expanded="true" signature="4089:4310" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="4382:4836" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="4909:5426" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="5533:6333" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="6394:6893" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="6969:7227" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="7303:7852" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="7909:8489" ph="{...}" />
+            <element signature="method#createAddressDictionary#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#generateHoursColumns#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#DistanceHelper#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#cleanUp#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="docComment;method#getTime#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getResult#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getResult#1;class#DistanceHelper#0" expanded="false" />
+            <element signature="docComment;method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#addAddressToDict#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#createAddressTable#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#insertTimes#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getAddressID#0;class#DistanceHelper#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -981,24 +1041,20 @@
         <state relative-caret-position="1155">
           <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
           <folding>
-            <marker date="1512224497029" expanded="false" signature="37:165" ph="..." />
-            <marker date="1512224497029" expanded="false" signature="564:1175" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="1249:1558" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="1588:1806" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="1834:1956" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="1963:2205" ph="/**...*/" />
-            <marker date="1512224497029" expanded="false" signature="2281:2515" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="2580:3130" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="3232:3813" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="3819:4024" ph="/**...*/" />
-            <marker date="1512224497029" expanded="true" signature="4089:4310" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="4382:4836" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="4909:5426" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="5533:6333" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="6394:6893" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="6969:7227" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="7303:7852" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="7909:8489" ph="{...}" />
+            <element signature="method#createAddressDictionary#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#generateHoursColumns#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#DistanceHelper#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#cleanUp#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="docComment;method#getTime#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getResult#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getResult#1;class#DistanceHelper#0" expanded="false" />
+            <element signature="docComment;method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#addAddressToDict#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#createAddressTable#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#insertTimes#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getAddressID#0;class#DistanceHelper#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1007,11 +1063,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="798">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
@@ -1026,29 +1084,25 @@
         <state relative-caret-position="2058">
           <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding>
-            <marker date="1512224497029" expanded="false" signature="37:165" ph="..." />
-            <marker date="1512224497029" expanded="false" signature="564:1175" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="1249:1558" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="1588:1806" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="1834:1956" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="1963:2205" ph="/**...*/" />
-            <marker date="1512224497029" expanded="false" signature="2281:2515" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="2580:3130" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="3232:3813" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="3819:4024" ph="/**...*/" />
-            <marker date="1512224497029" expanded="true" signature="4089:4310" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="4382:4836" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="4909:5426" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="5533:6333" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="6394:6893" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="6969:7227" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="7303:7852" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="7909:8489" ph="{...}" />
+            <element signature="method#createAddressDictionary#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#generateHoursColumns#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#DistanceHelper#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#cleanUp#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="docComment;method#getTime#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getResult#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getResult#1;class#DistanceHelper#0" expanded="false" />
+            <element signature="docComment;method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#addAddressToDict#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#createAddressTable#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#insertTimes#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getAddressID#0;class#DistanceHelper#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -1062,7 +1116,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1087,7 +1143,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -1108,7 +1164,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="777">
           <caret line="37" column="64" lean-forward="false" selection-start-line="37" selection-start-column="64" selection-end-line="37" selection-end-column="64" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1137,27 +1195,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/Route.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/json-20171018.jar!/org/json/JSONObject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1209,121 +1246,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A2">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java">
+    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A2" />
+    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A7" />
+    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A13" />
+    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A1" />
+    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A12" />
+    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.ADDRESSES_DICT" />
+    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A10" />
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/io/UnsupportedEncodingException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A7">
+    <entry file="jar://$PROJECT_DIR$/json-20171018.jar!/org/json/JSONObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="52" column="30" lean-forward="false" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Override.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="52" column="18" lean-forward="false" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.ADDRESSES_DICT">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A13">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A1">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A12">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.ADDRESSES_DICT">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A10">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="554" column="13" lean-forward="false" selection-start-line="554" selection-start-column="13" selection-end-line="554" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostNewAddressHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-          <folding>
-            <marker date="1512224497061" expanded="true" signature="40:421" ph="..." />
-            <marker date="1512224497061" expanded="true" signature="612:1764" ph="{...}" />
-            <marker date="1512224497061" expanded="true" signature="1821:2308" ph="{...}" />
-          </folding>
+        <state relative-caret-position="166">
+          <caret line="37" column="46" lean-forward="false" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/Main.java">
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A14">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="224">
+          <caret line="107" column="13" lean-forward="false" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1332,36 +1336,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="65" column="19" lean-forward="false" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+        <state relative-caret-position="234">
+          <caret line="214" column="29" lean-forward="true" selection-start-line="214" selection-start-column="29" selection-end-line="214" selection-end-column="29" />
           <folding>
-            <marker date="1512224497029" expanded="false" signature="37:165" ph="..." />
-            <marker date="1512224497029" expanded="false" signature="564:1175" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="1249:1558" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="1588:1806" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="1834:1956" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="1963:2205" ph="/**...*/" />
-            <marker date="1512224497029" expanded="false" signature="2281:2515" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="2580:3130" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="3232:3813" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="3819:4024" ph="/**...*/" />
-            <marker date="1512224497029" expanded="true" signature="4089:4310" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="4382:4836" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="4909:5426" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="5533:6333" ph="{...}" />
-            <marker date="1512224497029" expanded="false" signature="6394:6893" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="6969:7227" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="7303:7852" ph="{...}" />
-            <marker date="1512224497029" expanded="true" signature="7909:8489" ph="{...}" />
+            <element signature="method#createAddressDictionary#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#generateHoursColumns#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#DistanceHelper#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#cleanUp#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="docComment;method#getTime#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getResult#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getResult#1;class#DistanceHelper#0" expanded="false" />
+            <element signature="docComment;method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#addAddressToDict#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#createAddressTable#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#insertTimes#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getAddressID#0;class#DistanceHelper#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="50" lean-forward="false" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#VNSOptimizer#0;class#VNSOptimizer#0" expanded="false" />
+            <element signature="method#opt2#0;class#VNSOptimizer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/Route.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="78" column="39" lean-forward="false" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

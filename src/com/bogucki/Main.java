@@ -1,6 +1,9 @@
-package com.bogucki.networking;
+package com.bogucki;
 
 import com.bogucki.databse.DistanceHelper;
+import com.bogucki.networking.EchoPostNewAddressHandler;
+import com.bogucki.networking.EchoPostOptimizeHandler;
+import com.bogucki.networking.RootHandler;
 import com.sun.net.httpserver.HttpServer;
 
 import java.io.File;

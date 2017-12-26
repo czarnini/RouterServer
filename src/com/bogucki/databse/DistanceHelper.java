@@ -211,7 +211,7 @@ public class DistanceHelper {
     }
 
     public  int mapAddressToID(String addressToCheck) throws SQLException {
-        System.out.println("Mapping " + addressToCheck + "to ID");
+//        System.out.println("Mapping " + addressToCheck + "to ID");
         int id = getAddressID(addressToCheck);
         if(id != -1){
             System.out.println("ID == "+ id);

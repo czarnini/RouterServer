@@ -1,5 +1,7 @@
 package com.bogucki.networking;
 
+import com.bogucki.optimize.Route;
+import com.bogucki.optimize.VNSOptimizer;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import org.json.JSONArray;
@@ -11,9 +13,10 @@ import java.util.List;
 
 public class EchoPostOptimizeHandler implements HttpHandler {
     private List<String> cities = new ArrayList<>();
+    int cost = 0;
+    Route result;
 
     @Override
-
     public void handle(HttpExchange he) throws IOException {
 
         // parse request
@@ -27,25 +30,50 @@ public class EchoPostOptimizeHandler implements HttpHandler {
         while ((tmp = br.readLine()) != null) {
             query.append(tmp);
         }
-        parseQuery(query.toString());
 
-        // send response
+        VNSOptimizer vnsOptimizer = new VNSOptimizer(parseQuery(query.toString()));
+        try {
+            result = new Route(vnsOptimizer.optimize());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        cost = vnsOptimizer.costCounter();
+        System.out.println(cost);
+        sendResponse(he);
+    }
+
+
+    private void sendResponse(HttpExchange he) throws IOException {
         StringBuilder response = new StringBuilder();
+        response.append(cost);
+        for (int i = 0; i < result.getCitiesOrder().length; i++) {
+            response.append(";"+result.getCity(i));
+        }
         he.sendResponseHeaders(200, response.length());
         OutputStream os = he.getResponseBody();
         os.write(response.toString().getBytes());
         os.close();
     }
 
-    private void parseQuery(String query) throws UnsupportedEncodingException {
-
-        System.out.println("Parsing" + query);
-
-        JSONObject jsonQUERY = new JSONObject(query);
-        JSONArray sentCities = jsonQUERY.getJSONArray("destination_addresses");
-
-
+    private ArrayList<String> parseQuery(String query) {
+        ArrayList<String> result = new ArrayList<>();
+        try {
+            System.out.println("Parsing" + query);
+            JSONObject jsonQUERY = new JSONObject(query);
+            JSONArray sentCities = jsonQUERY.getJSONArray("addresses");
+            if (null != sentCities) {
+                int length = sentCities.length();
+                for (int i = 0; i < length; ++i) {
+                    result.add(sentCities.getString(i).toLowerCase().trim().replaceAll(" *, *", ","));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
     }
+
+
 }
 
 
