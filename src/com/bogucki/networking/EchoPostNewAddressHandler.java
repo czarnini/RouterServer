@@ -34,7 +34,7 @@ public class EchoPostNewAddressHandler implements HttpHandler {
         }
         System.out.println(query.toString());
         adressesToAdd = new ArrayList<>(parseQuery(query.toString()));
-        DistanceHelper helper = new DistanceHelper();
+        DistanceHelper helper = new DistanceHelper(null);
         for (String address : adressesToAdd) {
             try {
                 helper.mapAddressToID(address);

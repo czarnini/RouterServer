@@ -37,8 +37,6 @@ public class EchoPostOptimizeHandler implements HttpHandler {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        cost = vnsOptimizer.costCounter();
-        System.out.println(cost);
         sendResponse(he);
     }
 

@@ -1,17 +1,8 @@
 package com.bogucki.optimize;
 
 public class Meeting {
-    private Client client;
     private long timeEarliestPossible;
     private long timeLatesttPossible;
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
 
     public long getTimeEarliestPossible() {
         return timeEarliestPossible;

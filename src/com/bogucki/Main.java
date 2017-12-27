@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         if (!new File("Distances.db").exists()) {
-            DistanceHelper helper = new DistanceHelper();
+            DistanceHelper helper = new DistanceHelper(null);
             helper.createAddressDictionary();
             helper.cleanUp();
         }

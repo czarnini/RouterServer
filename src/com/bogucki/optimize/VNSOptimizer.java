@@ -6,7 +6,7 @@ import com.bogucki.databse.DistanceHelper;
 import java.util.ArrayList;
 
 public class VNSOptimizer {
-    public final ArrayList<String> meetings;
+    private final ArrayList<String> meetings;
     private DistanceHelper distanceHelper;
 
     private Route currentBest = null;
@@ -14,14 +14,27 @@ public class VNSOptimizer {
 
     public VNSOptimizer(ArrayList<String> meetings) {
         this.meetings = meetings;
-        distanceHelper = new DistanceHelper();
-        distanceHelper.loadDistancesToRAM(meetings);
+        distanceHelper = new DistanceHelper(meetings);
     }
 
     public int[] optimize() {
         System.out.println("Start optimizing");
         initialize();
+        int distance = 2;
+        while (distance < meetings.size()) {
 
+            opt2Result = currentBest.generateNeightbourRoute(distance);
+            opt2();
+            if(opt2Result.getCost() < currentBest.getCost()){
+                System.out.println("new best found! " + opt2Result.getCost());
+                currentBest = new Route(opt2Result);
+                distance = 2;
+            }else {
+                System.out.println("No better route found =< ");
+                distance += 2;
+            }
+
+        }
         System.out.println("Stop optimizing");
         return opt2Result.getCitiesOrder();
     }
@@ -29,7 +42,7 @@ public class VNSOptimizer {
     private void initialize() {
         opt2Result = Route.newRandomRoute(meetings.size(), distanceHelper);
         opt2();
-        currentBest = opt2Result;
+        currentBest = new Route(opt2Result);
     }
 
     public ArrayList<String> getMeetings() {
@@ -37,33 +50,23 @@ public class VNSOptimizer {
     }
 
 
-
     private void opt2() {
-        for (int a = 0; a < 20; a++) {
+        for (int a = 0; a < 2000; a++) {
             for (int i = 0; i < meetings.size() - 2; i++) {
-                String iThCity = meetings.get(opt2Result.getCity(i));
-                String iThCityNext = meetings.get(opt2Result.getCity(i+1));
-                for (int j = i+2; j <meetings.size()-1; j++) {
-                    String jThCity = meetings.get(opt2Result.getCity(j));
-                    String jThCityNext = meetings.get(opt2Result.getCity(j+1));
-                    int distA = distanceHelper.getTime(iThCity, iThCityNext, 0)
-                            + distanceHelper.getTime(jThCity, jThCityNext, 0);
-                    int distB = distanceHelper.getTime(iThCity, jThCity, 0)
-                            + distanceHelper.getTime(iThCityNext, jThCityNext, 0);
+                for (int j = i + 2; j < meetings.size() - 1; j++) {
+                    int distA = distanceHelper.getTime(i, i + 1, 0)
+                            + distanceHelper.getTime(j, j + 1, 0);
+                    int distB = distanceHelper.getTime(i, j, 0)
+                            + distanceHelper.getTime(i + 1, j + 1, 0);
 
-                    if (distA>distB){
-                        opt2Result.swap(i+1,j);
+                    if (distA > distB) {
+                        opt2Result.swap(i + 1, j);
                     }
                 }
             }
-            System.out.println(costCounter());
+            opt2Result.countCost();
         }
     }
 
-
-
-    private void generateNeightbourRoute(){
-
-    }
 
 }

@@ -10,16 +10,11 @@ import java.util.List;
 public class DistanceHelper {
 
     private static final String ADDRESSES_DICT = "ADDRESSES_DICT";
-    private  Connection c;
+    private Connection c;
 
 
-
-    private  volatile List<Integer> citiesIDs;
-    private  volatile List<String> citiesNames;
-    private  volatile HashMap<Integer, HashMap<Integer, Integer>> costs;
-
-    private int originID;
-    private int destinationID;
+    private volatile List<Integer> citiesIDs;
+    private volatile HashMap<Integer, HashMap<Integer, Integer>> costs;
 
     public void createAddressDictionary() {
         try {
@@ -40,7 +35,7 @@ public class DistanceHelper {
 
 
     //TODO dodać 24 godziny
-    private  String generateHoursColumns() {
+    private String generateHoursColumns() {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i <= 0; i++) {  //TODO 23
             builder.append("C").append(i).append(" INT NOT NULL");
@@ -51,17 +46,36 @@ public class DistanceHelper {
         return builder.toString();
     }
 
-    public DistanceHelper() {
+    public DistanceHelper(ArrayList<String> meetings) {
         try {
             String databaseUrl = "jdbc:sqlite:Distances.db";
             c = DriverManager.getConnection(databaseUrl);
+            loadDistancesToRAM(meetings);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
 
-    public void cleanUp(){
+    private void loadDistancesToRAM(List<String> list) {
+        System.out.println("Loading requested cities from HDD to RAM");
+        citiesIDs = new ArrayList<>();
+        costs = new HashMap<>();
+
+        for (String city : list) {
+            try {
+                int tmpCityID = mapAddressToID(city);
+                citiesIDs.add(tmpCityID);
+                costs.put(tmpCityID, new HashMap<>(getResult(0, tmpCityID)));
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+
+    public void cleanUp() {
         try {
             c.close();
         } catch (SQLException e) {
@@ -78,45 +92,22 @@ public class DistanceHelper {
      * @param destination - destination
      * @param timeOfStart - starting time
      */
-    public int getTime(String origin, String destination, int timeOfStart) {
-        {
 
-            originID = citiesIDs.get(citiesNames.indexOf(origin));
-            destinationID = citiesIDs.get(citiesNames.indexOf(destination));
-
-            return costs.get(originID).get(destinationID);
-
-        }
-
+    public int getTime(int origin, int destination, int timeOfStart) {
+        int originID = citiesIDs.get(origin);
+        int destinationID = citiesIDs.get(destination);
+        return costs.get(originID).get(destinationID);
     }
 
-    private int getResult(int timeOfStart) throws SQLException {
-        StringBuilder query = new StringBuilder();
-        query.append("SELECT C")
-                .append(timeOfStart)
-                .append(" FROM A")
-                .append(originID)
-                .append(" WHERE DEST_ID = ")
-                .append(destinationID);
-        //System.outprintln(query.toString());
-        Statement statement = c.createStatement();
-        ResultSet rs = statement.executeQuery(query.toString());
-        int result = rs.getInt(1);
-        rs.close();
-        statement.close();
-        return result;
-    }
 
-    private  HashMap<Integer, Integer> getResult(int timeOfStart, int originID) throws SQLException {
+    private HashMap<Integer, Integer> getResult(int timeOfStart, int originID) throws SQLException {
         HashMap<Integer, Integer> tmp = new HashMap<>();
-        StringBuilder query = new StringBuilder();
-        query.append("SELECT dest_id, C")
-                .append(timeOfStart)
-                .append(" FROM A")
-                .append(originID);
-        //System.outprintln(query.toString());
+        String query = "SELECT dest_id, C" +
+                timeOfStart +
+                " FROM A" +
+                originID;
         Statement statement = c.createStatement();
-        ResultSet rs = statement.executeQuery(query.toString());
+        ResultSet rs = statement.executeQuery(query);
         while (rs.next()) {
             tmp.put(rs.getInt(1), rs.getInt(2));
         }
@@ -132,16 +123,16 @@ public class DistanceHelper {
      *
      * @param address - address to be added
      */
-    private  int addAddress(String address) throws SQLException {
+    private int addAddress(String address) throws SQLException {
         int id;
         id = addAddressToDict(address);
         createAddressTable(id);
         insertTimes(1, id);
-        System.out.println("Adding " + address +"to database with ID: " + id);
+        System.out.println("Adding " + address + "to database with ID: " + id);
         return id;
     }
 
-    private  int addAddressToDict(String address) throws SQLException {
+    private int addAddressToDict(String address) throws SQLException {
         StringBuilder query = new StringBuilder("INSERT INTO " + ADDRESSES_DICT)
                 .append("(ADDRESS) VALUES ('")
                 .append(address)
@@ -156,7 +147,7 @@ public class DistanceHelper {
         return id;
     }
 
-    private  void createAddressTable(int originId) throws SQLException {
+    private void createAddressTable(int originId) throws SQLException {
         StringBuilder query = new StringBuilder("CREATE TABLE A")
                 .append(originId)
                 .append(" (")
@@ -173,7 +164,7 @@ public class DistanceHelper {
     }
 
     //TODO 24 godziny
-    private  void insertTimes(int originId, int destinationId) throws SQLException {
+    private void insertTimes(int originId, int destinationId) throws SQLException {
         if (originId == destinationId && destinationId == 1) {
             return;
         }
@@ -195,7 +186,7 @@ public class DistanceHelper {
         } while (originId < destinationId);
     }
 
-    private  String getAddress(int id) throws SQLException {
+    private String getAddress(int id) throws SQLException {
         StringBuilder query = new StringBuilder();
         query.append("SELECT ADDRESS")
                 .append(" FROM " + ADDRESSES_DICT + " ")
@@ -210,17 +201,17 @@ public class DistanceHelper {
         return address;
     }
 
-    public  int mapAddressToID(String addressToCheck) throws SQLException {
+
+    public int mapAddressToID(String addressToCheck) throws SQLException {
 //        System.out.println("Mapping " + addressToCheck + "to ID");
         int id = getAddressID(addressToCheck);
-        if(id != -1){
-            System.out.println("ID == "+ id);
+        if (id != -1) {
+            System.out.println("ID == " + id);
         }
         return -1 == id ? addAddress(addressToCheck) : id;
     }
 
-
-    private  int getAddressID(String addressToCheck) throws SQLException {
+    private int getAddressID(String addressToCheck) throws SQLException {
         StringBuilder query = new StringBuilder();
         query.append("SELECT ID")
                 .append(" FROM " + ADDRESSES_DICT + " ")
@@ -236,24 +227,5 @@ public class DistanceHelper {
             rs.close();
             return id;
         }
-    }
-
-    public  void loadDistancesToRAM(List<String> list) {
-        System.out.println("Loading requested cities from HDD to RAM");
-        citiesNames = new ArrayList<>(list);
-        citiesIDs = new ArrayList<>();
-        costs = new HashMap<>();
-
-        for (String city : list) {
-            try {
-                int tmpCityID = mapAddressToID(city);
-                List<Integer> tmp = new ArrayList<>();
-                citiesIDs.add(tmpCityID);
-                costs.put(tmpCityID, new HashMap<>(getResult(0, tmpCityID)));
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-
     }
 }
