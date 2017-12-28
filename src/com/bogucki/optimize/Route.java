@@ -5,7 +5,6 @@ import com.bogucki.databse.DistanceHelper;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.Random;
 
 /**
@@ -28,6 +27,8 @@ public class Route {
 
     public Route(Route baseRoute) {
         this.citiesOrder = baseRoute.getCitiesOrder().clone();
+        this.distanceHelper = baseRoute.distanceHelper;
+        this.cost = baseRoute.cost;
     }
 
     public int getCity(int index) {
@@ -58,6 +59,7 @@ public class Route {
         citiesOrder = org.apache.commons.lang3.ArrayUtils.addAll(
                 org.apache.commons.lang3.ArrayUtils.addAll(prefix, toSwap), sufix
         );
+
     }
 
 
@@ -77,7 +79,7 @@ public class Route {
     public void countCost() {
         int result = 0;
         for (int i = 0; i < citiesOrder.length - 1; i++) {
-            result += distanceHelper.getTime(i, i + 1, 0);
+            result += distanceHelper.getTime(citiesOrder[i], citiesOrder[i + 1], 0);
         }
         cost = result;
     }

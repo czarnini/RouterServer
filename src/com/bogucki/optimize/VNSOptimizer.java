@@ -20,20 +20,20 @@ public class VNSOptimizer {
     public int[] optimize() {
         System.out.println("Start optimizing");
         initialize();
-        int distance = 2;
-        while (distance < meetings.size()) {
 
-            opt2Result = currentBest.generateNeightbourRoute(distance);
-            opt2();
-            if(opt2Result.getCost() < currentBest.getCost()){
-                System.out.println("new best found! " + opt2Result.getCost());
-                currentBest = new Route(opt2Result);
-                distance = 2;
-            }else {
-                System.out.println("No better route found =< ");
-                distance += 2;
+        for (int i = 0; i < 100000; i++) {
+            int distance = 2;
+            while (distance < meetings.size()) {
+                opt2Result = currentBest.generateNeightbourRoute(distance);
+                opt2();
+                if (opt2Result.getCost() < currentBest.getCost()) {
+                    System.out.println("new best found! " + opt2Result.getCost());
+                    currentBest = new Route(opt2Result);
+                    distance = 2;
+                } else {
+                    distance += 2;
+                }
             }
-
         }
         System.out.println("Stop optimizing");
         return opt2Result.getCitiesOrder();
@@ -51,7 +51,11 @@ public class VNSOptimizer {
 
 
     private void opt2() {
-        for (int a = 0; a < 2000; a++) {
+
+//        opt2Result.countCost();
+//        System.out.println(opt2Result.getCost());
+
+        for (int a = 0; a < 50; a++) {
             for (int i = 0; i < meetings.size() - 2; i++) {
                 for (int j = i + 2; j < meetings.size() - 1; j++) {
                     int distA = distanceHelper.getTime(i, i + 1, 0)
@@ -64,8 +68,9 @@ public class VNSOptimizer {
                     }
                 }
             }
-            opt2Result.countCost();
         }
+        opt2Result.countCost();
+//        System.out.println(opt2Result.getCost());
     }
 
 
