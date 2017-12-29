@@ -45,16 +45,8 @@ public class VNSOptimizer {
         currentBest = new Route(opt2Result);
     }
 
-    public ArrayList<String> getMeetings() {
-        return meetings;
-    }
-
 
     private void opt2() {
-
-//        opt2Result.countCost();
-//        System.out.println(opt2Result.getCost());
-
         for (int a = 0; a < 50; a++) {
             for (int i = 0; i < meetings.size() - 2; i++) {
                 for (int j = i + 2; j < meetings.size() - 1; j++) {
@@ -70,7 +62,6 @@ public class VNSOptimizer {
             }
         }
         opt2Result.countCost();
-//        System.out.println(opt2Result.getCost());
     }
 
 

@@ -15,7 +15,7 @@ public class Route {
     private DistanceHelper distanceHelper;
     private int cost;
 
-    public Route(int routeLength, DistanceHelper helper) {
+    private Route(int routeLength, DistanceHelper helper) {
         citiesOrder = new int[routeLength];
         distanceHelper = helper;
         Arrays.fill(citiesOrder, -1);
@@ -25,7 +25,7 @@ public class Route {
         citiesOrder = baseRoute;
     }
 
-    public Route(Route baseRoute) {
+    Route(Route baseRoute) {
         this.citiesOrder = baseRoute.getCitiesOrder().clone();
         this.distanceHelper = baseRoute.distanceHelper;
         this.cost = baseRoute.cost;
@@ -35,7 +35,7 @@ public class Route {
         return citiesOrder[index];
     }
 
-    public void setCity(int city, int index) {
+    private void setCity(int city, int index) {
         this.citiesOrder[index] = city;
     }
 
@@ -44,10 +44,10 @@ public class Route {
     }
 
 
-    public void swap(int i, int j) {
+    void swap(int i, int j) {
         int[] prefix = Arrays.copyOfRange(citiesOrder, 0, i);
         int[] toSwap = Arrays.copyOfRange(citiesOrder, i, j + 1);
-        int[] sufix = Arrays.copyOfRange(citiesOrder, j + 1, citiesOrder.length);
+        int[] suffix = Arrays.copyOfRange(citiesOrder, j + 1, citiesOrder.length);
 
 
         int lastElementIndex = toSwap.length - 1;
@@ -57,13 +57,13 @@ public class Route {
             toSwap[lastElementIndex - k] = tmp;
         }
         citiesOrder = org.apache.commons.lang3.ArrayUtils.addAll(
-                org.apache.commons.lang3.ArrayUtils.addAll(prefix, toSwap), sufix
+                org.apache.commons.lang3.ArrayUtils.addAll(prefix, toSwap), suffix
         );
 
     }
 
 
-    public static Route newRandomRoute(int size, DistanceHelper helper) {
+    static Route newRandomRoute(int size, DistanceHelper helper) {
         Random generator = new Random();
         Route route = new Route(size, helper);
         for (int i = 0; i < size; i++) {
@@ -76,7 +76,7 @@ public class Route {
         return route;
     }
 
-    public void countCost() {
+    void countCost() {
         int result = 0;
         for (int i = 0; i < citiesOrder.length - 1; i++) {
             result += distanceHelper.getTime(citiesOrder[i], citiesOrder[i + 1], 0);
@@ -84,7 +84,7 @@ public class Route {
         cost = result;
     }
 
-    public int getCost() {
+    int getCost() {
         return cost;
     }
 
@@ -93,7 +93,7 @@ public class Route {
      * @param distance musi być parzysty - jedna krawędź to dwa wierzchołki
      * @return
      */
-    public Route generateNeightbourRoute(int distance) {
+    Route generateNeightbourRoute(int distance) {
         ArrayList<Integer> indexesToBeMoved = new ArrayList<>();
         Random generator = new Random();
         int protectedIndex;
