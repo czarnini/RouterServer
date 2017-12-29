@@ -12,6 +12,10 @@ public class VNSOptimizer {
     private Route currentBest = null;
     private Route opt2Result = null;
 
+
+    private static  int INITIAL_DISTANCE =4;
+    private static  int DISTANCE_STEP = 2;
+
     public VNSOptimizer(ArrayList<String> meetings) {
         this.meetings = meetings;
         distanceHelper = new DistanceHelper(meetings);
@@ -21,17 +25,17 @@ public class VNSOptimizer {
         System.out.println("Start optimizing");
         initialize();
 
-        for (int i = 0; i < 100000; i++) {
-            int distance = 2;
+        for (int i = 0; i < 2000000; i++) {
+            int distance = INITIAL_DISTANCE;
             while (distance < meetings.size()) {
                 opt2Result = currentBest.generateNeightbourRoute(distance);
                 opt2();
                 if (opt2Result.getCost() < currentBest.getCost()) {
                     System.out.println("new best found! " + opt2Result.getCost());
                     currentBest = new Route(opt2Result);
-                    distance = 2;
+                    distance = INITIAL_DISTANCE;
                 } else {
-                    distance += 2;
+                    distance += DISTANCE_STEP;
                 }
             }
         }
@@ -41,13 +45,14 @@ public class VNSOptimizer {
 
     private void initialize() {
         opt2Result = Route.newRandomRoute(meetings.size(), distanceHelper);
-        opt2();
+        for (int i = 0; i < 500; i++) {
+            opt2();
+        }
         currentBest = new Route(opt2Result);
     }
 
 
     private void opt2() {
-        for (int a = 0; a < 50; a++) {
             for (int i = 0; i < meetings.size() - 2; i++) {
                 for (int j = i + 2; j < meetings.size() - 1; j++) {
                     int distA = distanceHelper.getTime(i, i + 1, 0)
@@ -60,7 +65,6 @@ public class VNSOptimizer {
                     }
                 }
             }
-        }
         opt2Result.countCost();
     }
 
