@@ -62,7 +62,10 @@ public class EchoPostOptimizeHandler implements HttpHandler {
             if (null != sentCities) {
                 int length = sentCities.length();
                 for (int i = 0; i < length; ++i) {
-                    result.add(sentCities.getString(i).toLowerCase().trim().replaceAll(" *, *", ","));
+                    result.add(sentCities
+                            .getString(i)
+                            .replaceAll(" *, *", ",")
+                            .trim().toLowerCase());
                 }
             }
         } catch (Exception e) {

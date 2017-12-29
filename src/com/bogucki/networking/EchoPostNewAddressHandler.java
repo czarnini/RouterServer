@@ -16,8 +16,6 @@ import java.util.List;
 
 public class EchoPostNewAddressHandler implements HttpHandler {
 
-    private List<String> adressesToAdd;
-
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
 
@@ -33,15 +31,13 @@ public class EchoPostNewAddressHandler implements HttpHandler {
             query.append(tmp);
         }
         System.out.println(query.toString());
-        adressesToAdd = new ArrayList<>(parseQuery(query.toString()));
+        List<String> addressesToAdd = new ArrayList<>(parseQuery(query.toString()));
         DistanceHelper helper = new DistanceHelper(null);
-        for (String address : adressesToAdd) {
             try {
-                helper.mapAddressToID(address);
+                helper.addAddresses(addressesToAdd);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-        }
         helper.cleanUp();
 
         // send response
@@ -54,7 +50,7 @@ public class EchoPostNewAddressHandler implements HttpHandler {
 
     private ArrayList<String> parseQuery(String query) {
         ArrayList<String> result = new ArrayList<>();
-        JSONArray addressesJSON = new JSONObject(query).getJSONArray("Address");
+        JSONArray addressesJSON = new JSONObject(query).getJSONArray("addresses");
         if (null != addressesJSON) {
             int length = addressesJSON.length();
             for (int i = 0; i < length; ++i) {

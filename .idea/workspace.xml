@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df1eac5b-5b72-4fbe-8f30-45ca0839e47d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/7acb4859-592c-44ec-8bb9-82229381d550/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/7acb4859-592c-44ec-8bb9-82229381d550/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/7acb4859-592c-44ec-8bb9-82229381d550/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/7acb4859-592c-44ec-8bb9-82229381d550/_metadata_/metadata.values.at" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Distances.db" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/MapsAPI/GoogleMaps.class" afterPath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/MapsAPI/GoogleMaps.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/databse/DistanceHelper.class" afterPath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/databse/DistanceHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/networking/EchoPostNewAddressHandler.class" afterPath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/networking/EchoPostNewAddressHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/networking/EchoPostOptimizeHandler.class" afterPath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/networking/EchoPostOptimizeHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/optimize/Route.class" afterPath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/optimize/Route.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/optimize/VNSOptimizer.class" afterPath="$PROJECT_DIR$/out/production/RouterServer/com/bogucki/optimize/VNSOptimizer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/7acb4859-592c-44ec-8bb9-82229381d550.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/7acb4859-592c-44ec-8bb9-82229381d550.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bogucki/optimize/Route.java" afterPath="$PROJECT_DIR$/src/com/bogucki/optimize/Route.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java" afterPath="$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java" afterPath="$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java" afterPath="$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostNewAddressHandler.java" afterPath="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostNewAddressHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java" afterPath="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,6 +25,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Inynier$Main.coverage" NAME="Main Coverage Results" MODIFIED="1511649648672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/RouterServer$Main.coverage" NAME="Main Coverage Results" MODIFIED="1514555578945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -44,12 +45,6 @@
         <item name="Distances.db" type="e3449647:DbNodeDescriptor" />
         <item name="main" type="e3449647:DbNodeDescriptor" />
       </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="Distances.db" type="e3449647:DbNodeDescriptor" />
-        <item name="main" type="e3449647:DbNodeDescriptor" />
-        <item name="A14" type="e3449647:DbNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
@@ -57,80 +52,45 @@
     <favorites_list name="Inżynier" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="EchoPostOptimizeHandler.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="986">
-                  <caret line="58" column="50" lean-forward="true" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GoogleMaps.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
-                  <caret line="36" column="41" lean-forward="true" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="VNSOptimizer.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DistanceHelper.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1581">
-                  <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-                  <folding>
-                    <marker date="1514468697816" expanded="true" signature="3121:3196" ph="SELECT dest_... AmissingValue" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Route.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/Route.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="731">
-                  <caret line="49" column="20" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#578#579#0" expanded="true" />
-                    <element signature="e#617#618#0" expanded="true" />
-                    <element signature="e#2397#2398#0" expanded="true" />
-                    <element signature="e#2424#2425#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="DistanceHelper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="182" column="12" lean-forward="false" selection-start-line="182" selection-start-column="12" selection-end-line="182" selection-end-column="12" />
+              <folding>
+                <element signature="method#createAddressDictionary#0;class#DistanceHelper#0" expanded="false" />
+                <element signature="method#generateHoursColumns#0;class#DistanceHelper#0" expanded="false" />
+                <element signature="method#DistanceHelper#0;class#DistanceHelper#0" expanded="false" />
+                <element signature="method#loadDistancesToRAM#0;class#DistanceHelper#0" expanded="false" />
+                <element signature="method#cleanUp#0;class#DistanceHelper#0" expanded="false" />
+                <element signature="docComment;method#getTime#0;class#DistanceHelper#0" expanded="false" />
+                <element signature="method#getTime#0;class#DistanceHelper#0" expanded="false" />
+                <element signature="method#getResult#0;class#DistanceHelper#0" expanded="false" />
+                <element signature="docComment;method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+                <element signature="method#mapAddressToID#0;class#DistanceHelper#0" expanded="false" />
+                <element signature="method#getAddressID#0;class#DistanceHelper#0" expanded="false" />
+                <element signature="method#addAddresses#0;class#DistanceHelper#0" expanded="false" />
+                <marker date="1514557560364" expanded="false" signature="3237:3312" ph="SELECT dest_... AmissingValue" />
+                <marker date="1514557560364" expanded="true" signature="5039:5209" ph="CREATE TABLE... AmissingValue" />
+                <marker date="1514557560364" expanded="true" signature="5812:6038" ph="INSERT INTO AmissingValue... " />
+                <marker date="1514557560364" expanded="false" signature="6807:6848" ph="SELECT ADDRE... ADDRESSES_DICT" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GoogleMaps.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -141,13 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>insert into &quot;</find>
-      <find>insert into</find>
-      <find>Syste</find>
-      <find>while (rs.</find>
-      <find>est_id</find>
-      <find>+ tmp</find>
-      <find>sele</find>
       <find>select ID</find>
       <find>getRes</find>
       <find>System.out.</find>
@@ -171,6 +124,13 @@
       <find>opt2</find>
       <find>=&lt;</find>
       <find>swap</find>
+      <find>toLower</find>
+      <find>addressses</find>
+      <find>addresses</find>
+      <find>get</find>
+      <find>getAd</find>
+      <find>JSONARR</find>
+      <find>Get distance from API started</find>
     </findStrings>
     <replaceStrings>
       <replace>System.out</replace>
@@ -197,15 +157,15 @@
         <option value="dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A1" />
         <option value="dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.A13" />
         <option value="$PROJECT_DIR$/src/com/bogucki/networking/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/optimize/OPT2Optimizer.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/optimize/Meeting.java" />
-        <option value="$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostNewAddressHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/bogucki/Main.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java" />
         <option value="$PROJECT_DIR$/src/com/bogucki/optimize/Route.java" />
+        <option value="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/bogucki/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/bogucki/networking/EchoPostNewAddressHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java" />
+        <option value="$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java" />
       </list>
     </option>
   </component>
@@ -254,12 +214,6 @@
               <item name="RouterServer" type="58d84e3e:PackageViewProjectNode" />
               <item name="RouterServer" type="616d4139:PackageViewModuleNode" />
               <item name="com.bogucki" type="1f31426a:PackageElementNode" />
-              <item name="databse" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="RouterServer" type="58d84e3e:PackageViewProjectNode" />
-              <item name="RouterServer" type="616d4139:PackageViewModuleNode" />
-              <item name="com.bogucki" type="1f31426a:PackageElementNode" />
               <item name="networking" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
@@ -284,11 +238,14 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="da&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;han&#9;FILE&#9;file://C:/Users/boguc/IdeaProjects/RouterServer/src/com/bogucki/networking/EchoPostOptimizeHandler.java&#10;data&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;Googl&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/MapsAPI/GoogleMaps.java&#10;Main&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/Main.java&#10;Dis&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/databse/DistanceHelper.java&#10;goo&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/MapsAPI/GoogleMaps.java&#10;Main.ja&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/Main.java&#10;ec&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/EchoPostNewAddressHandler.java&#10;echo&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/EchoPostNewAddressHandler.java&#10;TODO&#9;ACTION&#9;ActivateTODOToolWindow&#10;TOD&#9;ACTION&#9;ActivateTODOToolWindow&#10;livet&#9;ACTION&#9;InsertLiveTemplate&#10;settin&#9;ACTION&#9;Database.Settings&#10;Maven&#9;ACTION&#9;ActivateMavenProjectsToolWindow" />
+    <property name="SearchEverywhereHistoryKey" value="data&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;help&#9;FILE&#9;file://C:/Users/boguc/IdeaProjects/RouterServer/src/com/bogucki/databse/DistanceHelper.java&#10;da&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;op&#9;FILE&#9;file://C:/Users/boguc/IdeaProjects/RouterServer/src/com/bogucki/networking/EchoPostOptimizeHandler.java&#10;add&#9;PSI&#9;JAVA://com.bogucki.databse.DistanceHelper#addAddress&#10;post&#9;FILE&#9;file://C:/Users/boguc/IdeaProjects/RouterServer/src/com/bogucki/networking/EchoPostNewAddressHandler.java&#10;han&#9;FILE&#9;file://C:/Users/boguc/IdeaProjects/RouterServer/src/com/bogucki/networking/EchoPostOptimizeHandler.java&#10;Googl&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/MapsAPI/GoogleMaps.java&#10;Main&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/Main.java&#10;Dis&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/databse/DistanceHelper.java&#10;goo&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/MapsAPI/GoogleMaps.java&#10;Main.ja&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/Main.java&#10;ec&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/EchoPostNewAddressHandler.java&#10;echo&#9;FILE&#9;file://D:/INF/Inżynier/src/com/bogucki/networking/EchoPostNewAddressHandler.java&#10;TODO&#9;ACTION&#9;ActivateTODOToolWindow&#10;TOD&#9;ACTION&#9;ActivateTODOToolWindow&#10;livet&#9;ACTION&#9;InsertLiveTemplate&#10;settin&#9;ACTION&#9;Database.Settings&#10;Maven&#9;ACTION&#9;ActivateMavenProjectsToolWindow" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
     <property name="full.screen.before.presentation.mode" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -721,7 +678,7 @@
       <workItem from="1512222442116" duration="4282000" />
       <workItem from="1514104859607" duration="6558000" />
       <workItem from="1514282196718" duration="9393000" />
-      <workItem from="1514547117002" duration="692000" />
+      <workItem from="1514547117002" duration="10337000" />
     </task>
     <task id="LOCAL-00001" summary="basic VNS is working">
       <created>1514473661425</created>
@@ -730,11 +687,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514473661425</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="little clean-up">
+      <created>1514547831100</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1514547831100</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85214000" />
+    <option name="totallyTimeSpent" value="94859000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -751,23 +715,26 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32750243" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25882354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="0" y="29" width="1914" height="1001" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2585034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="0" y="29" width="1914" height="1001" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1375" sideWeight="0.5055644" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14739583" sideWeight="0.49430895" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.084895834" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14739583" sideWeight="0.49076775" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1375" sideWeight="0.4944356" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847425" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28229168" sideWeight="0.50569105" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14739583" sideWeight="0.5092323" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38872692" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -775,10 +742,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32750243" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -792,7 +756,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.084895834" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1375" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -804,11 +768,11 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25882354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="0" y="29" width="1914" height="1001" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2585034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="0" y="29" width="1914" height="1001" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14739583" sideWeight="0.49430895" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847425" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28229168" sideWeight="0.50569105" order="6" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
@@ -839,22 +803,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="basic VNS is working" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic VNS is working" />
+    <MESSAGE value="little clean-up" />
+    <option name="LAST_COMMIT_MESSAGE" value="little clean-up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java</url>
-          <line>64</line>
+          <line>140</line>
           <properties />
-          <option name="timeStamp" value="37" />
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="46" />
+      <option name="time" value="68" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -863,182 +828,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostNewAddressHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="50" lean-forward="false" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2205">
-          <caret line="105" column="49" lean-forward="false" selection-start-line="105" selection-start-column="49" selection-end-line="105" selection-end-column="49" />
-          <folding>
-            <marker date="1514468697816" expanded="true" signature="3121:3196" ph="SELECT dest_... AmissingValue" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4f13308b/7acb4859-592c-44ec-8bb9-82229381d550/main.ADDRESSES_DICT" />
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3129">
-          <caret line="149" column="26" lean-forward="true" selection-start-line="149" selection-start-column="26" selection-end-line="149" selection-end-column="26" />
-          <folding>
-            <marker date="1514468697816" expanded="true" signature="3121:3196" ph="SELECT dest_... AmissingValue" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-          <folding>
-            <marker date="1514468697816" expanded="true" signature="3121:3196" ph="SELECT dest_... AmissingValue" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2058">
-          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <marker date="1514468697816" expanded="true" signature="3121:3196" ph="SELECT dest_... AmissingValue" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/RootHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/Route.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1058,7 +847,7 @@
         <state relative-caret-position="294">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1153,7 +942,6 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Override.java" />
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/HashMap.java" />
-    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A14" />
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/ArrayList.java" />
     <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/OPT2Optimizer.java" />
     <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/Meeting.java">
@@ -1163,31 +951,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/Route.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="49" column="20" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A9">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="48" column="24" lean-forward="false" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+          <folding>
+            <element signature="method#optimize#0;class#VNSOptimizer#0" expanded="false" />
+            <element signature="method#initialize#0;class#VNSOptimizer#0" expanded="false" />
+            <element signature="method#opt2#0;class#VNSOptimizer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A11">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostNewAddressHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="36" column="55" lean-forward="false" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+        <state relative-caret-position="562">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A19">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bogucki/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="59" lean-forward="false" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        <state relative-caret-position="204">
+          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <marker date="1514468697816" expanded="true" signature="3121:3196" ph="SELECT dest_... AmissingValue" />
-          </folding>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A16">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A15">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A14">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A13">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A18">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1198,49 +1060,198 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/VNSOptimizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/optimize/Route.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="49" column="20" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#2397#2398#0" expanded="true" />
-            <element signature="e#2424#2425#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bogucki/networking/EchoPostOptimizeHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="50" lean-forward="true" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A4">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bogucki/MapsAPI/GoogleMaps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="41" lean-forward="true" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+        <state relative-caret-position="221">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A7">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A6">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A3">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A2">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A18">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A18">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A18">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A8">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A1">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A17">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bogucki/databse/DistanceHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="182" column="12" lean-forward="false" selection-start-line="182" selection-start-column="12" selection-end-line="182" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#createAddressDictionary#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#generateHoursColumns#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#DistanceHelper#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#loadDistancesToRAM#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#cleanUp#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="docComment;method#getTime#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getTime#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getResult#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="docComment;method#addAddress#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#mapAddressToID#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#getAddressID#0;class#DistanceHelper#0" expanded="false" />
+            <element signature="method#addAddresses#0;class#DistanceHelper#0" expanded="false" />
+            <marker date="1514557560364" expanded="false" signature="3237:3312" ph="SELECT dest_... AmissingValue" />
+            <marker date="1514557560364" expanded="true" signature="5039:5209" ph="CREATE TABLE... AmissingValue" />
+            <marker date="1514557560364" expanded="true" signature="5812:6038" ph="INSERT INTO AmissingValue... " />
+            <marker date="1514557560364" expanded="false" signature="6807:6848" ph="SELECT ADDRE... ADDRESSES_DICT" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/17a1468a/7acb4859-592c-44ec-8bb9-82229381d550/main.A18">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>RouterServer</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>commons-io-2.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -1,6 +1,7 @@
 package com.bogucki.databse;
 
 import com.bogucki.MapsAPI.GoogleMaps;
+import org.apache.commons.lang3.StringUtils;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -57,12 +58,16 @@ public class DistanceHelper {
     }
 
 
-    private void loadDistancesToRAM(List<String> list) {
+    private void loadDistancesToRAM(List<String> meetings) {
+        if (null == meetings) {
+            return;
+        }
+
         System.out.println("Loading requested cities from HDD to RAM");
         citiesIDs = new ArrayList<>();
         costs = new HashMap<>();
 
-        for (String city : list) {
+        for (String city : meetings) {
             try {
                 int tmpCityID = mapAddressToID(city);
                 citiesIDs.add(tmpCityID);
@@ -124,10 +129,17 @@ public class DistanceHelper {
      * @param address - address to be added
      */
     private int addAddress(String address) throws SQLException {
+
+        String currentAddresses = StringUtils.join(getAllAddresses(),"|");
+        ArrayList<Integer> timesToNewAddress = GoogleMaps.getDistances(currentAddresses , address);
+        ArrayList<Integer> timesFromNewAddress = GoogleMaps.getDistances(address, currentAddresses);
+
         int id;
         id = addAddressToDict(address);
-        createAddressTable(id);
-        insertTimes(1, id);
+
+        createAddressTable(id, timesFromNewAddress);
+        insertTimes(1, id, timesToNewAddress);
+
         System.out.println("Adding " + address + "to database with ID: " + id);
         return id;
     }
@@ -138,7 +150,6 @@ public class DistanceHelper {
                 .append(address)
                 .append("');");
 
-        //System.outprintln(query.toString());
 
         Statement statement = c.createStatement();
         statement.executeUpdate(query.toString());
@@ -147,42 +158,41 @@ public class DistanceHelper {
         return id;
     }
 
-    private void createAddressTable(int originId) throws SQLException {
-        StringBuilder query = new StringBuilder("CREATE TABLE A")
-                .append(originId)
-                .append(" (")
-                .append("DEST_ID INT NOT NULL, ")
-                .append(generateHoursColumns())
-                .append(");");
+    private void createAddressTable(int originId, ArrayList<Integer> timesFromNewAddress) throws SQLException {
+        String query = "CREATE TABLE A" +
+                originId +
+                " (" +
+                "DEST_ID INT NOT NULL, " +
+                generateHoursColumns() +
+                ");";
 
-        //System.outprintln(query.toString());
-        c.createStatement().executeUpdate(query.toString());
+        c.createStatement().executeUpdate(query);
 
         for (int destinationId = 1; destinationId < originId; destinationId++) {
-            insertTimes(originId, destinationId);
+            timesFromNewAddress.set(0, timesFromNewAddress.get(destinationId-1));
+            insertTimes(originId, destinationId, timesFromNewAddress);
         }
     }
 
     //TODO 24 godziny
-    private void insertTimes(int originId, int destinationId) throws SQLException {
+    private void insertTimes(int originId, int destinationId, ArrayList<Integer> times) throws SQLException {
         if (originId == destinationId && destinationId == 1) {
             return;
         }
+        int helpfulIndex = 0;
         do {
-            String origin = getAddress(originId),
-                    destination = getAddress(destinationId);
-            int timeToInsert = GoogleMaps.getDistance(origin, destination);
-            StringBuilder query = new StringBuilder("INSERT INTO A")
-                    .append(originId)
-                    .append("(dest_id, C0) VALUES (")
-                    .append(destinationId)
-                    .append(", ")
-                    .append(timeToInsert)
-                    .append(");");
+            String query = "INSERT INTO A" +
+                    originId +
+                    "(dest_id, C0) VALUES (" +
+                    destinationId +
+                    ", " +
+                    times.get(helpfulIndex) +
+                    ");";
 
-            //System.outprintln(query.toString());
-            c.createStatement().executeUpdate(query.toString());
+
+            c.createStatement().executeUpdate(query);
             originId++;
+            helpfulIndex++;
         } while (originId < destinationId);
     }
 
@@ -192,7 +202,6 @@ public class DistanceHelper {
                 .append(" FROM " + ADDRESSES_DICT + " ")
                 .append("WHERE ID  = ")
                 .append(id);
-        //System.outprintln(query.toString());
         Statement statement = c.createStatement();
         ResultSet rs = statement.executeQuery(query.toString());
         String address = rs.getString(1);
@@ -201,15 +210,29 @@ public class DistanceHelper {
         return address;
     }
 
+    private ArrayList<String> getAllAddresses() throws SQLException {
+        String query = "SELECT ADDRESS" +
+                " FROM " + ADDRESSES_DICT + ";";
+        Statement statement = c.createStatement();
+        ResultSet rs = statement.executeQuery(query);
+        ArrayList<String> result = new ArrayList<>();
+        while (rs.next()) {
+            result.add(rs.getString(1));
+        }
+        rs.close();
+        statement.close();
+        return result;
+    }
+
 
     public int mapAddressToID(String addressToCheck) throws SQLException {
-//        System.out.println("Mapping " + addressToCheck + "to ID");
         int id = getAddressID(addressToCheck);
         if (id != -1) {
             System.out.println("ID == " + id);
         }
         return -1 == id ? addAddress(addressToCheck) : id;
     }
+
 
     private int getAddressID(String addressToCheck) throws SQLException {
         StringBuilder query = new StringBuilder();
@@ -218,7 +241,7 @@ public class DistanceHelper {
                 .append("WHERE ADDRESS  = '")
                 .append(addressToCheck)
                 .append("';");
-        //System.outprintln(query.toString());
+
         ResultSet rs = c.createStatement().executeQuery(query.toString());
         if (rs.isClosed()) {
             return -1;
@@ -227,5 +250,13 @@ public class DistanceHelper {
             rs.close();
             return id;
         }
+    }
+
+
+    public void addAddresses(List<String> addressesToAdd) throws SQLException {
+        for (String address : addressesToAdd) {
+            addAddress(address);
+        }
+
     }
 }
