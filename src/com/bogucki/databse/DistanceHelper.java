@@ -103,6 +103,7 @@ public class DistanceHelper {
         int originID = citiesIDs.get(origin);
         int destinationID = citiesIDs.get(destination);
         return costs.get(originID).get(destinationID);
+
     }
 
 
@@ -131,8 +132,8 @@ public class DistanceHelper {
      */
     private int addAddress(String address) throws SQLException {
 
-        String currentAddresses = StringUtils.join(getAllAddresses(),"|");
-        ArrayList<Integer> timesToNewAddress = GoogleMaps.getDistances(currentAddresses , address);
+        String currentAddresses = StringUtils.join(getAllAddresses(), "|");
+        ArrayList<Integer> timesToNewAddress = GoogleMaps.getDistances(currentAddresses, address);
         ArrayList<Integer> timesFromNewAddress = GoogleMaps.getDistances(address, currentAddresses);
 
         int id;
@@ -170,7 +171,7 @@ public class DistanceHelper {
         c.createStatement().executeUpdate(query);
 
         for (int destinationId = 1; destinationId < originId; destinationId++) {
-            timesFromNewAddress.set(0, timesFromNewAddress.get(destinationId-1));
+            timesFromNewAddress.set(0, timesFromNewAddress.get(destinationId - 1));
             insertTimes(originId, destinationId, timesFromNewAddress);
         }
     }

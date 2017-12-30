@@ -29,42 +29,36 @@ public class EchoPostOptimizeHandler implements HttpHandler {
             query.append(tmp);
         }
 
+        int avgCost = 0;
+
         ArrayList<Meeting> meetings = parseQuery(query.toString());
-        VNSOptimizer[] optimizers = new VNSOptimizer[4];
-        Thread[] threads = new Thread[4];
-        for (int i = 0; i < optimizers.length; i++) {
-            try {
-                optimizers[i] = new VNSOptimizer(meetings);
-                VNSOptimizer finalOptimizer = optimizers[i];
-                threads[i] = new Thread(finalOptimizer::optimize);
+        VNSOptimizer optimizer =  new VNSOptimizer(meetings);
+
+        for (int j = 1; j < 1001; j++) {
+            Thread[] threads = new Thread[3];
+            for (int i = 0; i < threads.length; i++) {
+                threads[i] = new Thread(optimizer::optimize);
                 threads[i].start();
-            } catch (Exception e){
-                e.printStackTrace();
             }
+
+
+            for (Thread thread : threads) {
+                try {
+                    thread.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            result = optimizer.getCurrentBest();
+            avgCost += result.getCost();
+            System.out.println("AVG COST: " + avgCost / j);
         }
 
-        try {
-            threads[3].join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        result = findBestSub(optimizers);
+        System.out.println("AVG COST: " + avgCost/100);
         sendResponse(he);
     }
 
-    private Route findBestSub(VNSOptimizer[] subResults) {
-        int minCost = subResults[0].getCurrentBest().getCost();
-        int minCostIndex = 0;
-        for (int i = 1; i < subResults.length; i++) {
-            if (subResults[i].getCurrentBest().getCost() < minCost) {
-                minCost = subResults[i].getCurrentBest().getCost();
-                minCostIndex = i;
-            }
-        }
-        System.out.println("Best of best is: " + minCost);
-        return subResults[minCostIndex].getCurrentBest();
-    }
 
 
     private void sendResponse(HttpExchange he) throws IOException {
@@ -78,6 +72,7 @@ public class EchoPostOptimizeHandler implements HttpHandler {
         OutputStream os = he.getResponseBody();
         os.write(response.toString().getBytes());
         os.close();
+        VNSOptimizer.currentBest = null;
     }
 
     private ArrayList<Meeting> parseQuery(String query) {
