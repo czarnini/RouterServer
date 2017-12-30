@@ -84,7 +84,7 @@ public class Route {
         cost = result;
     }
 
-    int getCost() {
+    public int getCost() {
         return cost;
     }
 

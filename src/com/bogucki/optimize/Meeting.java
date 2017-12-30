@@ -1,41 +1,25 @@
 package com.bogucki.optimize;
 
 public class Meeting {
-    private long timeEarliestPossible;
-    private long timeLatesttPossible;
+    private String address;
+    private long earliestTimePossible;
+    private long latestTimePossible;
 
-    public long getTimeEarliestPossible() {
-        return timeEarliestPossible;
+    public Meeting(String address, long earliestTimePossible, long latestTimePossible) {
+        this.address = address;
+        this.earliestTimePossible = earliestTimePossible;
+        this.latestTimePossible = latestTimePossible;
     }
 
-    public void setTimeEarliestPossible(long timeEarliestPossible) {
-        this.timeEarliestPossible = timeEarliestPossible;
+    public String getAddress() {
+        return address;
     }
 
-    public long getTimeLatesttPossible() {
-        return timeLatesttPossible;
+    public long getEarliestTimePossible() {
+        return earliestTimePossible;
     }
 
-    public void setTimeLatesttPossible(long timeLatesttPossible) {
-        this.timeLatesttPossible = timeLatesttPossible;
+    public long getLatestTimePossible() {
+        return latestTimePossible;
     }
-
-    public long getOptimalTimeOfStart() {
-        return optimalTimeOfStart;
-    }
-
-    public void setOptimalTimeOfStart(long optimalTimeOfStart) {
-        this.optimalTimeOfStart = optimalTimeOfStart;
-    }
-
-    public long getDuration() {
-        return duration;
-    }
-
-    public void setDuration(long duration) {
-        this.duration = duration;
-    }
-
-    private long optimalTimeOfStart;
-    private long duration;
 }

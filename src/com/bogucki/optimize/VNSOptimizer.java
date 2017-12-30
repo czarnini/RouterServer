@@ -6,17 +6,17 @@ import com.bogucki.databse.DistanceHelper;
 import java.util.ArrayList;
 
 public class VNSOptimizer {
-    private final ArrayList<String> meetings;
+    private final ArrayList<Meeting> meetings;
     private DistanceHelper distanceHelper;
 
     private Route currentBest = null;
     private Route opt2Result = null;
 
 
-    private static  int INITIAL_DISTANCE =4;
+    private static  int INITIAL_DISTANCE =2;
     private static  int DISTANCE_STEP = 2;
 
-    public VNSOptimizer(ArrayList<String> meetings) {
+    public VNSOptimizer(ArrayList<Meeting> meetings) {
         this.meetings = meetings;
         distanceHelper = new DistanceHelper(meetings);
     }
@@ -25,7 +25,7 @@ public class VNSOptimizer {
         System.out.println("Start optimizing");
         initialize();
 
-        for (int i = 0; i < 2000000; i++) {
+        for (int i = 0; i < 1000000000; i++) {
             int distance = INITIAL_DISTANCE;
             while (distance < meetings.size()) {
                 opt2Result = currentBest.generateNeightbourRoute(distance);

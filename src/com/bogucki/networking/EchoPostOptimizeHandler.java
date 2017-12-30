@@ -1,5 +1,6 @@
 package com.bogucki.networking;
 
+import com.bogucki.optimize.Meeting;
 import com.bogucki.optimize.Route;
 import com.bogucki.optimize.VNSOptimizer;
 import com.sun.net.httpserver.HttpExchange;
@@ -9,12 +10,8 @@ import org.json.JSONObject;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
-
 public class EchoPostOptimizeHandler implements HttpHandler {
-    private List<String> cities = new ArrayList<>();
-    int cost = 0;
-    Route result;
+    private Route result;
 
     @Override
     public void handle(HttpExchange he) throws IOException {
@@ -43,6 +40,7 @@ public class EchoPostOptimizeHandler implements HttpHandler {
 
     private void sendResponse(HttpExchange he) throws IOException {
         StringBuilder response = new StringBuilder();
+        int cost = result.getCost();
         response.append(cost);
         for (int i = 0; i < result.getCitiesOrder().length; i++) {
             response.append(";"+result.getCity(i));
@@ -53,19 +51,21 @@ public class EchoPostOptimizeHandler implements HttpHandler {
         os.close();
     }
 
-    private ArrayList<String> parseQuery(String query) {
-        ArrayList<String> result = new ArrayList<>();
+    private ArrayList<Meeting> parseQuery(String query) {
+        ArrayList<Meeting> result = new ArrayList<>();
         try {
             System.out.println("Parsing" + query);
             JSONObject jsonQUERY = new JSONObject(query);
-            JSONArray sentCities = jsonQUERY.getJSONArray("addresses");
-            if (null != sentCities) {
-                int length = sentCities.length();
+            JSONArray sentMeetings = jsonQUERY.getJSONArray("meetings");
+            if (null != sentMeetings) {
+                int length = sentMeetings.length();
                 for (int i = 0; i < length; ++i) {
-                    result.add(sentCities
-                            .getString(i)
-                            .replaceAll(" *, *", ",")
-                            .trim().toLowerCase());
+                    JSONObject currentMeeting = sentMeetings.getJSONObject(i);
+                    result.add(new Meeting(
+                            currentMeeting.getString("address").replaceAll(" *, *", ",").trim().toLowerCase(),
+                            currentMeeting.getInt("ETP"),
+                            currentMeeting.getInt("LTP")
+                    ));
                 }
             }
         } catch (Exception e) {
