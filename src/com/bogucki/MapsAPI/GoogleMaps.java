@@ -70,6 +70,7 @@ public class GoogleMaps {
                 .addPathSegment("json")
                 .addQueryParameter("origins", origin)
                 .addQueryParameter("destinations", destination)
+                .addQueryParameter("departure_time ","1544702400")
                 .addQueryParameter("key", key)
                 .build();
     }
