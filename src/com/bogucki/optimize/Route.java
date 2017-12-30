@@ -21,9 +21,6 @@ public class Route {
         Arrays.fill(citiesOrder, -1);
     }
 
-    public Route(int[] baseRoute) {
-        citiesOrder = baseRoute;
-    }
 
     Route(Route baseRoute) {
         this.citiesOrder = baseRoute.getCitiesOrder().clone();

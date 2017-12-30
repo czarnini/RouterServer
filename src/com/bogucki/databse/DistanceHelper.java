@@ -228,9 +228,9 @@ public class DistanceHelper {
 
     public int mapAddressToID(String addressToCheck) throws SQLException {
         int id = getAddressID(addressToCheck);
-        if (id != -1) {
+/*        if (id != -1) {
             System.out.println("ID == " + id);
-        }
+        }*/
         return -1 == id ? addAddress(addressToCheck) : id;
     }
 

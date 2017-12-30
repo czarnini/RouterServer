@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import java.io.*;
 import java.util.ArrayList;
+
 public class EchoPostOptimizeHandler implements HttpHandler {
     private Route result;
 
@@ -28,13 +29,41 @@ public class EchoPostOptimizeHandler implements HttpHandler {
             query.append(tmp);
         }
 
-        VNSOptimizer vnsOptimizer = new VNSOptimizer(parseQuery(query.toString()));
+        ArrayList<Meeting> meetings = parseQuery(query.toString());
+        VNSOptimizer[] optimizers = new VNSOptimizer[4];
+        Thread[] threads = new Thread[4];
+        for (int i = 0; i < optimizers.length; i++) {
+            try {
+                optimizers[i] = new VNSOptimizer(meetings);
+                VNSOptimizer finalOptimizer = optimizers[i];
+                threads[i] = new Thread(finalOptimizer::optimize);
+                threads[i].start();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+
         try {
-            result = new Route(vnsOptimizer.optimize());
-        } catch (Exception e) {
+            threads[3].join();
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        result = findBestSub(optimizers);
         sendResponse(he);
+    }
+
+    private Route findBestSub(VNSOptimizer[] subResults) {
+        int minCost = subResults[0].getCurrentBest().getCost();
+        int minCostIndex = 0;
+        for (int i = 1; i < subResults.length; i++) {
+            if (subResults[i].getCurrentBest().getCost() < minCost) {
+                minCost = subResults[i].getCurrentBest().getCost();
+                minCostIndex = i;
+            }
+        }
+        System.out.println("Best of best is: " + minCost);
+        return subResults[minCostIndex].getCurrentBest();
     }
 
 
@@ -43,7 +72,7 @@ public class EchoPostOptimizeHandler implements HttpHandler {
         int cost = result.getCost();
         response.append(cost);
         for (int i = 0; i < result.getCitiesOrder().length; i++) {
-            response.append(";"+result.getCity(i));
+            response.append(";" + result.getCity(i));
         }
         he.sendResponseHeaders(200, response.length());
         OutputStream os = he.getResponseBody();
