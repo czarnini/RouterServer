@@ -14,6 +14,7 @@ public class Route {
     private int[] citiesOrder;
     private DistanceHelper distanceHelper;
     private int cost;
+    private boolean feasible;
 
     private Route(int routeLength, DistanceHelper helper) {
         citiesOrder = new int[routeLength];
@@ -102,12 +103,32 @@ public class Route {
         }
 
         Route result = new Route(this);
-        for (int i = 0; i < indexesToBeMoved.size()-1; i += 2) {
-            result.setCity(citiesOrder[indexesToBeMoved.get(i)], indexesToBeMoved.get(i+1));
-            result.setCity(citiesOrder[indexesToBeMoved.get(i+1)], indexesToBeMoved.get(i));
+        for (int i = 0; i < indexesToBeMoved.size() - 1; i += 2) {
+            result.setCity(citiesOrder[indexesToBeMoved.get(i)], indexesToBeMoved.get(i + 1));
+            result.setCity(citiesOrder[indexesToBeMoved.get(i + 1)], indexesToBeMoved.get(i));
         }
 
         return result;
     }
 
+    public boolean isFeasible() {
+        int currentTime = 0;
+        for (int i = 0; i < citiesOrder.length - 1; i++) {
+            if (currentTime > distanceHelper.getMeetings().get(citiesOrder[i]).getLatestTimePossible()) {
+                return false;
+            }
+            currentTime += distanceHelper.getTime(citiesOrder[i], citiesOrder[i + 1], currentTime) / 3600;
+        }
+        return true;
+    }
+
+    public void getRoute() {
+        int currentTime = 0;
+        for (int i = 0; i < citiesOrder.length; i++) {
+            int index = citiesOrder[i];
+            System.out.println(distanceHelper.getMeetings().get(index).getAddress() + " ETA: " + currentTime);
+            currentTime += distanceHelper.getTime(citiesOrder[i], citiesOrder[i + 1], currentTime) / 3600;
+        }
+
+    }
 }

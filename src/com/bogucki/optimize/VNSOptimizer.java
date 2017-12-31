@@ -26,29 +26,34 @@ public class VNSOptimizer {
     public void optimize() {
         try {
             initialize();
-            for (int i = 0; i < 50000; i++) {
+            for (int i = 0; i < 100000; i++) {
                 int distance = INITIAL_DISTANCE;
                 while (distance < meetings.size()) {
                     Route opt2Result = opt2(myCurrentBest.generateNeightbourRoute(distance));
 
-                    if (opt2Result.getCost() < currentBest.getCost()) {
-                        System.out.println("new best found! " + opt2Result.getCost() +
-                                " previous best was: " + currentBest.getCost() +
-                                " Thread: " + Thread.currentThread().getName() +
-                                " Iteration: " + i);
-                        currentBest = new Route(opt2Result);
-                        distance = INITIAL_DISTANCE;
-                    } else {
+                    if (opt2Result.isFeasible()) {
+                        if (!(opt2Result.getCost() < currentBest.getCost())){
                         distance += DISTANCE_STEP;
-                    }
+                    }else{
+                    System.out.println("new best found! " + opt2Result.getCost() +
+                            " previous best was: " + currentBest.getCost() +
+                            " Thread: " + Thread.currentThread().getName() +
+                            " Iteration: " + i);
+                    currentBest = new Route(opt2Result);
+                    distance = INITIAL_DISTANCE;}
                 }
-
-                myCurrentBest = new Route(Route.newRandomRoute(meetings.size(),distanceHelper));
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+
+            myCurrentBest = new Route(Route.newRandomRoute(meetings.size(), distanceHelper));
         }
+    } catch(
+    Exception e)
+
+    {
+        e.printStackTrace();
     }
+
+}
 
     private synchronized void initialize() {
         myCurrentBest = new Route(opt2(Route.newRandomRoute(meetings.size(), distanceHelper)));
@@ -59,18 +64,20 @@ public class VNSOptimizer {
 
 
     private Route opt2(Route opt2ResultLocal) {
+
         for (int i = 0; i < meetings.size() - 2; i++) {
             for (int j = i + 2; j < meetings.size() - 1; j++) {
-                int distA = distanceHelper.getTime(i, i + 1, 0)
-                        + distanceHelper.getTime(j, j + 1, 0);
-                int distB = distanceHelper.getTime(i, j, 0)
-                        + distanceHelper.getTime(i + 1, j + 1, 0);
+                int distA = distanceHelper.getTime(i, i + 1, 9)
+                        + distanceHelper.getTime(j, j + 1, 9);
+                int distB = distanceHelper.getTime(i, j, 9)
+                        + distanceHelper.getTime(i + 1, j + 1, 9);
 
                 if (distA > distB) {
                     opt2ResultLocal.swap(i + 1, j);
                 }
             }
         }
+
         opt2ResultLocal.countCost();
         return opt2ResultLocal;
     }

@@ -34,7 +34,7 @@ public class EchoPostOptimizeHandler implements HttpHandler {
         ArrayList<Meeting> meetings = parseQuery(query.toString());
         VNSOptimizer optimizer =  new VNSOptimizer(meetings);
 
-        for (int j = 1; j < 1001; j++) {
+
             Thread[] threads = new Thread[3];
             for (int i = 0; i < threads.length; i++) {
                 threads[i] = new Thread(optimizer::optimize);
@@ -52,10 +52,10 @@ public class EchoPostOptimizeHandler implements HttpHandler {
 
             result = optimizer.getCurrentBest();
             avgCost += result.getCost();
-            System.out.println("AVG COST: " + avgCost / j);
-        }
 
-        System.out.println("AVG COST: " + avgCost/100);
+
+        System.out.println("COST: " + avgCost/3600.0);
+        result.getRoute();
         sendResponse(he);
     }
 
