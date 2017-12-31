@@ -36,12 +36,11 @@ public class DistanceHelper {
     }
 
 
-    //TODO dodać 24 godziny
     private String generateHoursColumns() {
         StringBuilder builder = new StringBuilder();
-        for (int i = 0; i <= 0; i++) {  //TODO 23
-            builder.append("C").append(i).append(" INT NOT NULL");
-            if (i != 0) {//TODO 23
+        for (int i = 0; i < 24; i++) {
+            builder.append("C").append(i).append(" INT NOT NULL ");
+            if (i != 23) {
                 builder.append(", ");
             }
         }
@@ -176,7 +175,6 @@ public class DistanceHelper {
         }
     }
 
-    //TODO 24 godziny
     private void insertTimes(int originId, int destinationId, ArrayList<Integer> times) throws SQLException {
         if (originId == destinationId && destinationId == 1) {
             return;
@@ -185,10 +183,9 @@ public class DistanceHelper {
         do {
             String query = "INSERT INTO A" +
                     originId +
-                    "(dest_id, C0) VALUES (" +
+                    "(dest_id, C0, C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15,C16,C17,C18,C19,C20,C21,C22,C23) VALUES (" +
                     destinationId +
-                    ", " +
-                    times.get(helpfulIndex) +
+                    generateTimeDistribution(times.get(helpfulIndex)) +
                     ");";
 
 
@@ -227,7 +224,7 @@ public class DistanceHelper {
     }
 
 
-    public int mapAddressToID(String addressToCheck) throws SQLException {
+    private int mapAddressToID(String addressToCheck) throws SQLException {
         int id = getAddressID(addressToCheck);
 /*        if (id != -1) {
             System.out.println("ID == " + id);
@@ -261,4 +258,27 @@ public class DistanceHelper {
         }
 
     }
+
+    private String generateTimeDistribution(int midnightTime) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < 24; i++) {
+            result.append(", ");
+            if (i <= 6) {
+                result.append(midnightTime);
+            } else if (i <= 10) {
+                result.append(5*midnightTime);
+            } else if (i <= 14) {
+                result.append(2.5*midnightTime);
+            } else if (i <= 18) {
+                result.append(5*midnightTime);
+            } else if (i <= 22) {
+                result.append(1.5*midnightTime);
+            } else {
+                result.append(midnightTime);
+            }
+        }
+
+        return result.toString();
+    }
+
 }
