@@ -1,6 +1,7 @@
 package com.bogucki.databse;
 
 import com.bogucki.MapsAPI.GoogleMaps;
+import com.bogucki.optimize.Meeting;
 import org.apache.commons.lang3.StringUtils;
 
 import java.sql.*;
@@ -11,11 +12,12 @@ import java.util.List;
 public class DistanceHelper {
 
     private static final String ADDRESSES_DICT = "ADDRESSES_DICT";
+    private final ArrayList<Meeting> meetings;
     private Connection c;
 
 
-    private volatile List<Integer> citiesIDs;
-    private volatile HashMap<Integer, HashMap<Integer, Integer>> costs;
+    private volatile List<Integer> addressesIds;
+    private volatile HashMap<Integer, HashMap<Integer, HashMap<Integer, Integer>>> costs;
 
     public void createAddressDictionary() {
         try {
@@ -35,43 +37,50 @@ public class DistanceHelper {
     }
 
 
-    //TODO dodać 24 godziny
     private String generateHoursColumns() {
         StringBuilder builder = new StringBuilder();
-        for (int i = 0; i <= 0; i++) {  //TODO 23
-            builder.append("C").append(i).append(" INT NOT NULL");
-            if (i != 0) {//TODO 23
+        for (int i = 0; i < 24; i++) {
+            builder.append("C").append(i).append(" INT NOT NULL ");
+            if (i != 23) {
                 builder.append(", ");
             }
         }
         return builder.toString();
     }
 
-    public DistanceHelper(ArrayList<String> meetings) {
+    public DistanceHelper(ArrayList<Meeting> meetings) {
+        this.meetings = meetings;
         try {
             String databaseUrl = "jdbc:sqlite:Distances.db";
             c = DriverManager.getConnection(databaseUrl);
-            loadDistancesToRAM(meetings);
+            loadDistancesToRAM();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
 
-    private void loadDistancesToRAM(List<String> meetings) {
+    private void loadDistancesToRAM() {
         if (null == meetings) {
             return;
         }
 
         System.out.println("Loading requested cities from HDD to RAM");
-        citiesIDs = new ArrayList<>();
+        addressesIds = new ArrayList<>();
         costs = new HashMap<>();
 
-        for (String city : meetings) {
+        for (Meeting meeting : meetings) {
             try {
-                int tmpCityID = mapAddressToID(city);
-                citiesIDs.add(tmpCityID);
-                costs.put(tmpCityID, new HashMap<>(getResult(0, tmpCityID)));
+                int tmpCityID = mapAddressToID(meeting.getAddress());
+                addressesIds.add(tmpCityID);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        for (int addressId : addressesIds) {
+            try {
+                costs.put(addressId, new HashMap<>(loadTimesFromAddress(addressId)));
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -99,26 +108,32 @@ public class DistanceHelper {
      */
 
     public int getTime(int origin, int destination, int timeOfStart) {
-        int originID = citiesIDs.get(origin);
-        int destinationID = citiesIDs.get(destination);
-        return costs.get(originID).get(destinationID);
+        int originID = addressesIds.get(origin);
+        int destinationID = addressesIds.get(destination);
+        return costs.get(originID).get(destinationID).get(timeOfStart);
+
     }
 
 
-    private HashMap<Integer, Integer> getResult(int timeOfStart, int originID) throws SQLException {
-        HashMap<Integer, Integer> tmp = new HashMap<>();
-        String query = "SELECT dest_id, C" +
-                timeOfStart +
-                " FROM A" +
-                originID;
+    private HashMap<Integer, HashMap<Integer, Integer>> loadTimesFromAddress(int originID) throws SQLException {
+
+        HashMap<Integer, HashMap<Integer, Integer>> result = new HashMap<>();
+        String query = " SELECT dest_id, C0, C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15,C16,C17,C18,C19,C20,C21,C22,C23 " +
+                " FROM A" + originID +
+                " WHERE  dest_id IN (" + StringUtils.join(addressesIds," , ") +")";
         Statement statement = c.createStatement();
         ResultSet rs = statement.executeQuery(query);
+
         while (rs.next()) {
-            tmp.put(rs.getInt(1), rs.getInt(2));
+            HashMap<Integer, Integer> hours = new HashMap<>();
+            result.put(rs.getInt(1), hours);
+            for (int i = 0; i < 24; i++) {
+                hours.put(i, rs.getInt(i + 2));
+            }
         }
         rs.close();
         statement.close();
-        return tmp;
+        return result;
     }
 
     /**
@@ -130,8 +145,8 @@ public class DistanceHelper {
      */
     private int addAddress(String address) throws SQLException {
 
-        String currentAddresses = StringUtils.join(getAllAddresses(),"|");
-        ArrayList<Integer> timesToNewAddress = GoogleMaps.getDistances(currentAddresses , address);
+        String currentAddresses = StringUtils.join(getAllAddresses(), "|");
+        ArrayList<Integer> timesToNewAddress = GoogleMaps.getDistances(currentAddresses, address);
         ArrayList<Integer> timesFromNewAddress = GoogleMaps.getDistances(address, currentAddresses);
 
         int id;
@@ -169,12 +184,11 @@ public class DistanceHelper {
         c.createStatement().executeUpdate(query);
 
         for (int destinationId = 1; destinationId < originId; destinationId++) {
-            timesFromNewAddress.set(0, timesFromNewAddress.get(destinationId-1));
+            timesFromNewAddress.set(0, timesFromNewAddress.get(destinationId - 1));
             insertTimes(originId, destinationId, timesFromNewAddress);
         }
     }
 
-    //TODO 24 godziny
     private void insertTimes(int originId, int destinationId, ArrayList<Integer> times) throws SQLException {
         if (originId == destinationId && destinationId == 1) {
             return;
@@ -183,10 +197,9 @@ public class DistanceHelper {
         do {
             String query = "INSERT INTO A" +
                     originId +
-                    "(dest_id, C0) VALUES (" +
+                    "(dest_id, C0, C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15,C16,C17,C18,C19,C20,C21,C22,C23) VALUES (" +
                     destinationId +
-                    ", " +
-                    times.get(helpfulIndex) +
+                    generateTimeDistribution(times.get(helpfulIndex)) +
                     ");";
 
 
@@ -196,19 +209,6 @@ public class DistanceHelper {
         } while (originId < destinationId);
     }
 
-    private String getAddress(int id) throws SQLException {
-        StringBuilder query = new StringBuilder();
-        query.append("SELECT ADDRESS")
-                .append(" FROM " + ADDRESSES_DICT + " ")
-                .append("WHERE ID  = ")
-                .append(id);
-        Statement statement = c.createStatement();
-        ResultSet rs = statement.executeQuery(query.toString());
-        String address = rs.getString(1);
-        rs.close();
-        statement.close();
-        return address;
-    }
 
     private ArrayList<String> getAllAddresses() throws SQLException {
         String query = "SELECT ADDRESS" +
@@ -225,11 +225,11 @@ public class DistanceHelper {
     }
 
 
-    public int mapAddressToID(String addressToCheck) throws SQLException {
+    private int mapAddressToID(String addressToCheck) throws SQLException {
         int id = getAddressID(addressToCheck);
-        if (id != -1) {
+/*        if (id != -1) {
             System.out.println("ID == " + id);
-        }
+        }*/
         return -1 == id ? addAddress(addressToCheck) : id;
     }
 
@@ -258,5 +258,31 @@ public class DistanceHelper {
             addAddress(address);
         }
 
+    }
+
+    private String generateTimeDistribution(int midnightTime) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < 24; i++) {
+            result.append(", ");
+            if (i <= 6) {
+                result.append(midnightTime);
+            } else if (i <= 10) {
+                result.append(5 * midnightTime);
+            } else if (i <= 14) {
+                result.append(2.5 * midnightTime);
+            } else if (i <= 18) {
+                result.append(5 * midnightTime);
+            } else if (i <= 22) {
+                result.append(1.5 * midnightTime);
+            } else {
+                result.append(midnightTime);
+            }
+        }
+
+        return result.toString();
+    }
+
+    public ArrayList<Meeting> getMeetings() {
+        return meetings;
     }
 }
