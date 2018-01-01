@@ -26,34 +26,44 @@ public class VNSOptimizer {
     public void optimize() {
         try {
             initialize();
-            for (int i = 0; i < 100000; i++) {
+            long start = System.currentTimeMillis();
+            while (System.currentTimeMillis() - start < 10 *1000) {
                 int distance = INITIAL_DISTANCE;
+                int notFeasibleCount = 0;
                 while (distance < meetings.size()) {
                     Route opt2Result = opt2(myCurrentBest.generateNeightbourRoute(distance));
-
                     if (opt2Result.isFeasible()) {
-                        if (!(opt2Result.getCost() < currentBest.getCost())){
-                        distance += DISTANCE_STEP;
-                    }else{
-                    System.out.println("new best found! " + opt2Result.getCost() +
-                            " previous best was: " + currentBest.getCost() +
-                            " Thread: " + Thread.currentThread().getName() +
-                            " Iteration: " + i);
-                    currentBest = new Route(opt2Result);
-                    distance = INITIAL_DISTANCE;}
+                        distance = getDistance(distance, opt2Result);
+                    } /*else {
+                        notFeasibleCount++;
+                        if(notFeasibleCount > 1000){
+                            break;
+                        }
+                    }*/
                 }
+
             }
+        } catch (
+                Exception e)
 
-            myCurrentBest = new Route(Route.newRandomRoute(meetings.size(), distanceHelper));
+        {
+            e.printStackTrace();
         }
-    } catch(
-    Exception e)
 
-    {
-        e.printStackTrace();
     }
 
-}
+   synchronized private int getDistance(int distance, Route opt2Result) {
+        currentBest.countCost();
+        if (!(opt2Result.getCost() < currentBest.getCost())) {
+            distance += DISTANCE_STEP;
+        } else {
+            System.out.println(Thread.currentThread().getName()+"new best found! " + String.format("%.2f",opt2Result.getCost()/3600.0));
+            currentBest = new Route(opt2Result);
+            myCurrentBest = new Route(currentBest);
+            distance = INITIAL_DISTANCE;
+        }
+        return distance;
+    }
 
     private synchronized void initialize() {
         myCurrentBest = new Route(opt2(Route.newRandomRoute(meetings.size(), distanceHelper)));

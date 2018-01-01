@@ -43,23 +43,16 @@ public class Route {
 
 
     void swap(int i, int j) {
-        int[] prefix = Arrays.copyOfRange(citiesOrder, 0, i);
-        int[] toSwap = Arrays.copyOfRange(citiesOrder, i, j + 1);
-        int[] suffix = Arrays.copyOfRange(citiesOrder, j + 1, citiesOrder.length);
-
-
-        int lastElementIndex = toSwap.length - 1;
-        for (int k = 1; k < toSwap.length; k++) {
-            int tmp = toSwap[k];
-            toSwap[k] = toSwap[lastElementIndex - k];
-            toSwap[lastElementIndex - k] = tmp;
+        int result[] = new int[citiesOrder.length];
+        for (int k = 0; k < result.length; k++) {
+            if (k > i && k < j) {
+                result[k] = citiesOrder[j - (k-i)];
+            } else {
+                result[k] = citiesOrder[k];
+            }
         }
-        citiesOrder = org.apache.commons.lang3.ArrayUtils.addAll(
-                org.apache.commons.lang3.ArrayUtils.addAll(prefix, toSwap), suffix
-        );
-
+        citiesOrder = Arrays.copyOf(result,result.length);
     }
-
 
     static Route newRandomRoute(int size, DistanceHelper helper) {
         Random generator = new Random();
@@ -74,7 +67,7 @@ public class Route {
         return route;
     }
 
-    void countCost() {
+    synchronized void countCost() {
         int result = 0;
         for (int i = 0; i < citiesOrder.length - 1; i++) {
             result += distanceHelper.getTime(citiesOrder[i], citiesOrder[i + 1], 0);
@@ -123,11 +116,17 @@ public class Route {
     }
 
     public void getRoute() {
-        int currentTime = 0;
-        for (int i = 0; i < citiesOrder.length; i++) {
-            int index = citiesOrder[i];
-            System.out.println(distanceHelper.getMeetings().get(index).getAddress() + " ETA: " + currentTime);
-            currentTime += distanceHelper.getTime(citiesOrder[i], citiesOrder[i + 1], currentTime) / 3600;
+        try {
+
+
+            int currentTime = 0;
+            for (int i = 0; i < citiesOrder.length - 1; i++) {
+                int index = citiesOrder[i];
+                System.out.println(distanceHelper.getMeetings().get(index).getAddress() + " ETA: " + currentTime / 3600);
+                currentTime += distanceHelper.getTime(citiesOrder[i], citiesOrder[i + 1], currentTime / 3600);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }

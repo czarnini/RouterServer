@@ -29,22 +29,25 @@ public class EchoPostOptimizeHandler implements HttpHandler {
             query.append(tmp);
         }
 
-        int avgCost = 0;
-
-        ArrayList<Meeting> meetings = parseQuery(query.toString());
-        VNSOptimizer optimizer =  new VNSOptimizer(meetings);
+        for (int iter = 0; iter < 60; iter++) {
 
 
-            Thread[] threads = new Thread[3];
+            int avgCost = 0;
+
+            ArrayList<Meeting> meetings = parseQuery(query.toString());
+            VNSOptimizer optimizer = new VNSOptimizer(meetings);
+
+
+            Thread[] threads = new Thread[Runtime.getRuntime().availableProcessors()];
             for (int i = 0; i < threads.length; i++) {
                 threads[i] = new Thread(optimizer::optimize);
                 threads[i].start();
             }
 
 
-            for (Thread thread : threads) {
+            for (int i = 0; i < threads.length; i++) {
                 try {
-                    thread.join();
+                    threads[i].join();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -54,8 +57,11 @@ public class EchoPostOptimizeHandler implements HttpHandler {
             avgCost += result.getCost();
 
 
-        System.out.println("COST: " + avgCost/3600.0);
-        result.getRoute();
+            System.out.println("COST: " + String.format("%.2f\n\n\n\n\n", avgCost / 3600.0));
+            VNSOptimizer.currentBest = null;
+
+        }
+        //result.getRoute();
         sendResponse(he);
     }
 
@@ -63,8 +69,8 @@ public class EchoPostOptimizeHandler implements HttpHandler {
 
     private void sendResponse(HttpExchange he) throws IOException {
         StringBuilder response = new StringBuilder();
-        int cost = result.getCost();
-        response.append(cost);
+        double cost = result.getCost()/3600.0;
+        response.append(String.format("%.2f",cost));
         for (int i = 0; i < result.getCitiesOrder().length; i++) {
             response.append(";" + result.getCity(i));
         }
@@ -78,7 +84,6 @@ public class EchoPostOptimizeHandler implements HttpHandler {
     private ArrayList<Meeting> parseQuery(String query) {
         ArrayList<Meeting> result = new ArrayList<>();
         try {
-            System.out.println("Parsing" + query);
             JSONObject jsonQUERY = new JSONObject(query);
             JSONArray sentMeetings = jsonQUERY.getJSONArray("meetings");
             if (null != sentMeetings) {
