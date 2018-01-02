@@ -5,11 +5,13 @@ import com.bogucki.optimize.Route;
 import com.bogucki.optimize.VNSOptimizer;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+import org.apache.commons.lang3.ArrayUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class EchoPostOptimizeHandler implements HttpHandler {
     private Route result;
@@ -29,51 +31,52 @@ public class EchoPostOptimizeHandler implements HttpHandler {
             query.append(tmp);
         }
 
-        for (int iter = 0; iter < 60; iter++) {
+        int avgCost = 0;
+
+        ArrayList<Meeting> meetings = parseQuery(query.toString());
+        VNSOptimizer optimizer = new VNSOptimizer(meetings);
 
 
-            int avgCost = 0;
-
-            ArrayList<Meeting> meetings = parseQuery(query.toString());
-            VNSOptimizer optimizer = new VNSOptimizer(meetings);
-
-
-            Thread[] threads = new Thread[Runtime.getRuntime().availableProcessors()];
-            for (int i = 0; i < threads.length; i++) {
-                threads[i] = new Thread(optimizer::optimize);
-                threads[i].start();
-            }
-
-
-            for (int i = 0; i < threads.length; i++) {
-                try {
-                    threads[i].join();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            result = optimizer.getCurrentBest();
-            avgCost += result.getCost();
-
-
-            System.out.println("COST: " + String.format("%.2f\n\n\n\n\n", avgCost / 3600.0));
-            VNSOptimizer.currentBest = null;
-
+        Thread[] threads = new Thread[Runtime.getRuntime().availableProcessors()];
+        for (int i = 0; i < threads.length; i++) {
+            threads[i] = new Thread(optimizer::optimize);
+            threads[i].start();
         }
+
+
+        for (int i = 0; i < threads.length; i++) {
+            try {
+                threads[i].join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        result = optimizer.getCurrentBest();
+        avgCost += result.getCost();
+
+
+        System.out.println("COST: " + String.format("%.2f\n\n\n\n\n", avgCost / 3600.0));
+        VNSOptimizer.currentBest = null;
+
+
         //result.getRoute();
         sendResponse(he);
     }
 
 
-
     private void sendResponse(HttpExchange he) throws IOException {
-        StringBuilder response = new StringBuilder();
-        double cost = result.getCost()/3600.0;
-        response.append(String.format("%.2f",cost));
+        StringBuilder response = new StringBuilder("{\"result\":[");
+        JSONObject tmp = new JSONObject();
+
+
         for (int i = 0; i < result.getCitiesOrder().length; i++) {
-            response.append(";" + result.getCity(i));
+            if(i!=0){
+                response.append(", ");
+            }
+            response.append( result.getCity(i));
         }
+        response.append("]}");
         he.sendResponseHeaders(200, response.length());
         OutputStream os = he.getResponseBody();
         os.write(response.toString().getBytes());

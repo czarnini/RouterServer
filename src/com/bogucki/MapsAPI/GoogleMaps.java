@@ -15,7 +15,7 @@ public class GoogleMaps {
         if("".equals(origin) | "".equals(destination)){
             return new ArrayList<>(0);
         }
-        System.out.println("Get distance from API started");
+        System.out.println("Get distance from API started " + origin);
         HttpUrl url = getHttpUrl(origin, destination);
         Request request = new Request.Builder().url(url).build();
         try {

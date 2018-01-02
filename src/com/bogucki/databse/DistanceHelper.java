@@ -149,6 +149,7 @@ public class DistanceHelper {
         ArrayList<Integer> timesToNewAddress = GoogleMaps.getDistances(currentAddresses, address);
         ArrayList<Integer> timesFromNewAddress = GoogleMaps.getDistances(address, currentAddresses);
 
+
         int id;
         id = addAddressToDict(address);
 
@@ -230,6 +231,19 @@ public class DistanceHelper {
 /*        if (id != -1) {
             System.out.println("ID == " + id);
         }*/
+
+
+        //TODO delete when Młynarska 8/12 is fixed
+        if(id == 49){
+            String currentAddresses = StringUtils.join(getAllAddresses(), "|");
+            ArrayList<Integer> timesToNewAddress = GoogleMaps.getDistances(currentAddresses, addressToCheck);
+            ArrayList<Integer> timesFromNewAddress = GoogleMaps.getDistances(addressToCheck, currentAddresses);
+            createAddressTable(id, timesFromNewAddress);
+            insertTimes(1, id, timesToNewAddress);
+            return 49;
+        }
+
+
         return -1 == id ? addAddress(addressToCheck) : id;
     }
 
@@ -255,7 +269,7 @@ public class DistanceHelper {
 
     public void addAddresses(List<String> addressesToAdd) throws SQLException {
         for (String address : addressesToAdd) {
-            addAddress(address);
+            mapAddressToID(address);
         }
 
     }

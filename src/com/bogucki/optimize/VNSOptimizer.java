@@ -27,19 +27,35 @@ public class VNSOptimizer {
         try {
             initialize();
             long start = System.currentTimeMillis();
-            while (System.currentTimeMillis() - start < 10 *1000) {
+            int i =0;
+            int lastSuccesIndex = 0;
+            while (System.currentTimeMillis() - start < 5 *1000) {
+                ++i;
                 int distance = INITIAL_DISTANCE;
                 int notFeasibleCount = 0;
                 while (distance < meetings.size()) {
                     Route opt2Result = opt2(myCurrentBest.generateNeightbourRoute(distance));
                     if (opt2Result.isFeasible()) {
-                        distance = getDistance(distance, opt2Result);
+                        if ( getDistance( opt2Result) ){
+                            distance = INITIAL_DISTANCE;
+                            lastSuccesIndex = i;
+                        } else {
+                            distance += DISTANCE_STEP;
+                        }
                     } /*else {
                         notFeasibleCount++;
                         if(notFeasibleCount > 1000){
                             break;
                         }
                     }*/
+                }
+
+                if(i - lastSuccesIndex > 10000){
+                    myCurrentBest = Route.newRandomRoute(meetings.size(), distanceHelper);
+                }
+
+                if(i - lastSuccesIndex > 1000000){
+                    break;
                 }
 
             }
@@ -52,17 +68,16 @@ public class VNSOptimizer {
 
     }
 
-   synchronized private int getDistance(int distance, Route opt2Result) {
+   synchronized private boolean getDistance( Route opt2Result) {
         currentBest.countCost();
         if (!(opt2Result.getCost() < currentBest.getCost())) {
-            distance += DISTANCE_STEP;
+            return false;
         } else {
             System.out.println(Thread.currentThread().getName()+"new best found! " + String.format("%.2f",opt2Result.getCost()/3600.0));
             currentBest = new Route(opt2Result);
             myCurrentBest = new Route(currentBest);
-            distance = INITIAL_DISTANCE;
+            return true;
         }
-        return distance;
     }
 
     private synchronized void initialize() {
